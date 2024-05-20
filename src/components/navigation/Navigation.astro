@@ -1,0 +1,36 @@
+---
+import Profile from './Profile.astro';
+const categories = ["debug", "opinion", "corporate", "frontend", "junior", "self destruct", "astro"]
+---
+
+<nav>
+
+    <Profile />
+
+    <h3>Navigation</h3>
+    
+    <ul>
+        <li><a class="nav-item" href="/">Home</a></li>
+        <li><a class="nav-item" href="/about">About</a></li>
+        {categories.map((category) => (
+			<li><a class="nav-item" href={`/tags/${category}`}>{category}</a></li>
+		))}
+    </ul>
+
+</nav>
+
+
+<style>
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: var(--nav-width);
+        border-radius: var(--border-rounded);
+        border-top: 3px solid var(--tertiary);
+    }
+
+</style>
