@@ -1,0 +1,45 @@
+---
+---
+
+<header>
+
+    <h1>VerySeriousBusiness</h1>
+    <div>
+        <span>themswitch</span>
+        <div>
+            <span>a</span>
+            <span>b</span>
+            <span>c</span>
+        </div>
+    </div>
+
+</header>
+
+<style>
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: var(--header-height);
+    width: calc(100% - var(--nav-width));
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    color: var(--text-primary);
+    margin-left: var(--nav-width);
+    padding-left: calc(var(--nav-width) / 2);
+    border-left: var(--borders);
+    border-right: var(--borders);
+    border-radius: var(--border-rounded);
+    box-shadow: var(--box-shadow);
+}
+
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column;
+        }
+    }
+    
+</style>

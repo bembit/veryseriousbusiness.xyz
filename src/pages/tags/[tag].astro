@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+// import BlogPost from '../../components/BlogPost.astro';
+
+// this
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("posts");
+
+  // def not a long term solution. or is it
+  const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) => post.data.tags.includes(tag));
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+<BaseLayout pageTitle={tag}>
+  <main>
+
+    <article>
+      <h1>{tag}</h1>
+      <ul>
+        {posts.map((post) =>
+          <a
+            href={`/posts/${post.slug}`}
+            title={post.data.title}
+          >{post.data.title}</a>
+        )}
+      </ul>
+    </article>
+
+    <aside>
+      <p>Posts tagged with `"{tag}`"</p>
+    </aside>
+
+  </main>
+  
+</BaseLayout>

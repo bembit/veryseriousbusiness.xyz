@@ -1,0 +1,152 @@
+:root {
+    /* default light */
+    --text-primary: #f5515f;
+    --text-secondary: #0b0b0b;
+    --background-primary: #1b96f1;
+    --background-primary-opacity: #1b96f17e;
+    --secondary: #f3f0e8;
+    --secondary-opacity: #f3f0e8d0;
+    --tertiary: #0b0b0b;
+    /* light */
+    --text-primary-light: #f5515f;
+    --text-secondary-light: #0b0b0b;
+    --background-primary-light: #1b96f1;
+    --background-primary-light-opacity: #1b96f17e;
+    --secondary-light: #f3f0e8;
+    --secondary-light-opacity: #f3f0e8d0;
+    --tertiary-light: #0b0b0b;
+    /* dark */
+    --text-primary-dark: #cf4a60;
+    --text-secondary-dark: #beddf2;
+    --background-primary-dark: #000a12;
+    --background-primary-dark-opacity: #000a127e;
+    --secondary-dark: #021f37;
+    --secondary-dark-opacity: #021f377e;
+    --tertiary-dark: #beddf2;
+    /* mine */
+    --text-primary-mine: #ea4b01;
+    --text-secondary-mine: #f9d98a;
+    --background-primary-mine: #e20707;
+    --background-primary-mine-opacity: #e207077e;
+    --secondary-mine: #040c50;
+    --secondary-mine-opacity: #040c507e;
+    --tertiary-mine: #ffb700;
+    /* mixed */
+    --highlight-blue: #63c2eb;
+    --highlight-green: #4fe196;
+
+    --header-height: 100px;
+    --nav-width: 400px;
+    --background-image: radial-gradient(circle at 100% 100%, var(--background-primary-opacity), var(--secondary) 95%, var(--secondary) 95%);
+    --box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .2);
+    --box-shadow-light: 0 3px 15px rgba(255, 255, 255, 0.096);
+    --text-primary-gradient: #f5515f88;
+    --background-primary-gradient: #1b94f161;
+    --background-image-span: linear-gradient(45deg, #cc331b, #b10303);
+    --borders: 3px solid var(--tertiary);
+    --border-zero: 0px;
+    --border-small: 5px;
+    --border-rounded: 25px;
+    --footer-height: 65px;
+}
+
+html {
+    font-size: 67.5%;
+    font-family: var(--font-regular);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: var(--secondary);
+    background-image: var(--background-image);
+    font-family: 'Material Icons', sans-serif;
+    font-family: 'Public Sans Variable', sans-serif;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}
+
+*,
+*::after,
+*::before {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: capitalize;
+}
+
+ul {
+    list-style: none;
+}
+
+a,a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+::selection {
+    background-color: var(--text-primary);
+    color: var(--secondary);
+}
+
+main {
+    position: relative;
+    margin-top: var(--header-height);
+    display: flex;
+    flex-direction: row;
+    margin-left: var(--nav-width);
+    min-height: 100vh;
+    border-top: 3px solid var(--tertiary);
+    border-left: 3px solid var(--tertiary);
+    border-radius: 25px;
+    border-bottom-left-radius: 0px;
+}
+
+article {
+    color: var(--text-secondary);
+    flex-basis: 75%;
+    padding-top: calc(var(--nav-width) / 5);
+    padding-left: calc(var(--nav-width) / 2);
+    padding-right: calc(var(--nav-width) /2);
+    padding-bottom: calc(var(--footer-height) + 50px);
+}
+
+
+aside {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 25%;
+    padding-top: calc(var(--nav-width) / 10);
+    padding-left: calc(var(--nav-width) / 10);
+    padding-right: calc(var(--nav-width) / 10);
+    border-left: var(--borders);
+    border-radius: var(--border-rounded);
+    border-bottom-left-radius: var(--border-zero);
+}

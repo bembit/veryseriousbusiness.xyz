@@ -1,5 +1,20 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
 const title = "Not Found."
 ---
 
-<h2>{title}</h2>
+<BaseLayout pageTitle={title}>
+
+    <main>
+
+        <article>
+            <h1>Not found.</h1>
+        </article>
+
+        <aside>
+            <p>Wrong time, wrong place.</p>
+        </aside>
+        
+    </main>
+
+</BaseLayout>

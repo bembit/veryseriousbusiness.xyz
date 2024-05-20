@@ -1,15 +1,29 @@
 ---
-const title = "Hello.";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Hello.";
+
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('posts');
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<h1>{title}</h1>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+
+	<main>
+		<article>
+			
+			{allPosts.map(post => (
+				<a href={`/posts/${post.slug}`} title={post.data.title}>
+					<h1>{post.data.title}</h1>
+					<p>{post.data.description}</p>
+				</a>
+			))}
+
+		</article>
+
+		<aside>
+			no
+		</aside>
+	</main>
+
+</BaseLayout>
