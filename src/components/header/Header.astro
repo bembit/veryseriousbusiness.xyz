@@ -4,41 +4,129 @@
 <header>
 
     <h1>VerySeriousBusiness</h1>
+    <div><p>sex.</p> <span>love.</span> <p>and</p> <span>debugs.</span></div> 
+
     <div>
-        <span>themswitch</span>
+        <!-- <span>O</span>
         <div>
-            <span>a</span>
-            <span>b</span>
-            <span>c</span>
-        </div>
+            <span>-</span>
+            <span>-</span>
+            <span>-</span>
+        </div> -->
     </div>
 
 </header>
 
 <style>
 
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-height: var(--header-height);
-    width: calc(100% - var(--nav-width));
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    color: var(--text-primary);
-    margin-left: var(--nav-width);
-    padding-left: calc(var(--nav-width) / 2);
-    border-left: var(--borders);
-    border-right: var(--borders);
-    border-radius: var(--border-rounded);
-    box-shadow: var(--box-shadow);
-}
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: var(--header-height);
+        width: calc(100% - var(--nav-width));
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        color: var(--text-primary);
+        padding-left: var(--header-height);
+        margin-left: var(--nav-width);
+        border-left: var(--borders);
+        border-right: var(--borders);
+        border-radius: var(--border-rounded);
+        /* box-shadow: var(--box-shadow); */
+    }
+
+    header h1 {
+        font-weight: 900;
+        /* letter-spacing: -1px; */
+    }
+
+    header div {
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+
+    header div p {
+        display: inline-block;
+    }
+
+    header div p:first-of-type {
+        transform: translateX(15px);
+        text-decoration: line-through;
+    }
+
+    header span:first-of-type {
+        font-size: 2.2rem;
+        color: var(--tertiary);
+        display: inline-block;
+        transform: rotate(10deg);
+    }
+
+    header span:last-of-type {
+        font-size: 2.6rem;
+        color: var(--tertiary);
+        display: inline-block;
+        transform: rotate(-10deg);
+        text-decoration: underline;
+    }
 
     @media (max-width: 768px) {
         header {
             flex-direction: column;
+        }
+    }
+
+    @media (max-width: 1250px) {
+        header {
+            padding-left: calc(var(--header-height) / 2);
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        /* :root { --nav-width: 200px; --header-height: 75px; } html { font-size: 80%; } body { flex-direction: column; }
+        #mobileNav {
+            display: block;
+        } */
+        header {
+            /* width: 100%;
+            position: relative;
+            padding-left: 0px;
+            border-top: 3px solid var(--tertiary);
+            border-right: none;
+            border-bottom: 3px solid var(--tertiary);
+            border-left: none;
+            flex-direction: row;
+            height: var(--header-height);
+            user-select: none;
+            -ms-user-select: none;
+            -webkit-user-select: none; */
+            h1 {
+                /* display: none; */
+                font-size: 1.6rem;
+                margin-left: 10px;
+                text-decoration: none;
+                transform: translateY(-5px);
+            }
+            div {
+                position: absolute;
+                top: 45%;
+                left: 20%;
+                font-size: 1rem;
+                transform: translateY(-5px);
+            }
+            div p:first-of-type {
+                transform: translateX(10px);
+            }
+            span:first-of-type {
+                font-size: 1.4rem;
+                transform: rotate(5deg);
+            }
+            span:last-of-type {
+                font-size: 1.6rem;
+                transform: rotate(-5deg);
+            }
         }
     }
     
