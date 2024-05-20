@@ -2,17 +2,17 @@
 ---
 
 <header>
-
-    <h1>VerySeriousBusiness</h1>
-    <div><p>sex.</p> <span>love.</span> <p>and</p> <span>debugs.</span></div> 
-
     <div>
-        <!-- <span>O</span>
-        <div>
-            <span>-</span>
-            <span>-</span>
-            <span>-</span>
-        </div> -->
+        <h1>VerySeriousBusiness</h1>
+        <div class="subtitle"><p>sex.</p><span>love.</span> <p>and</p> <span>debugs.</span></div> 
+    </div>
+    <div>
+        <span class="material-icons">dark_mode</span>
+        <span id="mobile-nav-toggle" class="material-icons">menu</span>
+        <nav>
+            <a href="/">Home</a>
+            <a class="nav-link" href="/tags">Tags</a>
+        </nav>
     </div>
 
 </header>
@@ -29,8 +29,10 @@
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
+        justify-content: space-between;
         color: var(--text-primary);
         padding-left: var(--header-height);
+        padding-right: var(--header-height);
         margin-left: var(--nav-width);
         border-left: var(--borders);
         border-right: var(--borders);
@@ -40,10 +42,15 @@
 
     header h1 {
         font-weight: 900;
-        /* letter-spacing: -1px; */
     }
 
-    header div {
+    /* subtitle decoration */
+
+    header div:not(.subtitle) {
+        display: flex;
+    }
+
+    header div.subtitle {
         font-size: 1.5rem;
         font-weight: 900;
     }
@@ -57,14 +64,14 @@
         text-decoration: line-through;
     }
 
-    header span:first-of-type {
+    header span:first-of-type:not(.material-icons) {
         font-size: 2.2rem;
         color: var(--tertiary);
         display: inline-block;
         transform: rotate(10deg);
     }
 
-    header span:last-of-type {
+    header span:last-of-type:not(.material-icons) {
         font-size: 2.6rem;
         color: var(--tertiary);
         display: inline-block;
@@ -72,10 +79,43 @@
         text-decoration: underline;
     }
 
-    @media (max-width: 768px) {
-        header {
-            flex-direction: column;
-        }
+    /* right side tiny menu */
+
+    header > div:last-of-type {
+        padding: 1rem 2rem;
+        background-color: #0000000a;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid var(--text-secondary);
+    }
+
+    header nav a:not(:last-of-type) {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    header nav a:hover {
+        color: var(--text-secondary);
+    }
+
+    header span.material-icons {
+        font-size: 2.6rem;
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    header span.material-icons:hover {
+        color: var(--text-secondary);
+        cursor: pointer;
+    }
+
+    #mobile-nav-toggle {
+        display: none;
     }
 
     @media (max-width: 1250px) {
@@ -127,7 +167,17 @@
                 font-size: 1.6rem;
                 transform: rotate(-5deg);
             }
+    }
+
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column;
         }
+        #mobile-nav-toggle {
+            display: block;
+        }
+    }
+
     }
     
 </style>

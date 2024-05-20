@@ -1,6 +1,6 @@
 ---
 import Profile from './Profile.astro';
-const categories = ["debug", "opinion", "corporate", "frontend", "junior", "self destruct", "astro"]
+const mainCategories = ["debug", "opinion", "frontend", "junior", "self destruct"]
 ---
 
 <nav>
@@ -11,8 +11,8 @@ const categories = ["debug", "opinion", "corporate", "frontend", "junior", "self
         <li class="nav-item"><a href="/">Home</a></li>
         <li class="nav-item"><a href="/about">About</a></li>
         <li class="nav-item"><a href="/tags">All Tags</a></li>
-        {categories.map((category) => (
-			<li class="nav-item" ><a href={`/tags/${category}`}>{category}</a></li>
+        {mainCategories.map((category) => (
+			<li class="nav-item" ><a href={`/tags/${category}`}>{category}</a></li> 
 		))}
     </ul>
 
@@ -45,38 +45,44 @@ const categories = ["debug", "opinion", "corporate", "frontend", "junior", "self
         /* justify-content: center; */
         /* align-items: flex-end; */
         width: 70%;
-        background-color: #0000000a;
     }
 
     .nav-item {
         /* padding: .25rem; */
         font-weight: 700;
-        /* width: 100%; */
-        margin-top: .5rem;
+        /* width: 100%; */;
         text-align: right;
+        background-color: #0000000a;
+        margin-top: .35rem;
     }
 
     .nav-item a {
-        border-left: 1px solid var(--tertiary);
+        border-left: 1px solid var(--text-secondary);
         text-transform: uppercase;
         font-size: 1.2rem;
         display: inline-block;
-        width: 50%;
+        width: 95%;
         padding: .5rem .5rem .5rem 15px;
         font-weight: 700;
-        color: var(--text-primary);
-        /* border-bottom: 3px solid var(--text-primary); */
-        /* box-shadow: var(--box-shadow); */
+        color: var(--text-secondary);
         transition: all .3s ease-in-out;
+        /* ok this one is accidental but I like it */
+        margin-right: 1rem;
     }
 
     .nav-item a:hover {
         background-color: var(--tertiary);
         color: var(--text-primary);
-        border-left: 1px solid var(--tertiary);
+        /* border-left: 3px solid var(--tertiary); */
         padding-right: 15px;
         width: 100%;
+    }
 
+    .active {
+        background-color: var(--text-primary);
+        color: var(--text-secondary);
+        border-left: 3px solid var(--text-primary);
+        padding-right: 15px;
     }
 
     @media (max-height: 850px) {
@@ -84,6 +90,24 @@ const categories = ["debug", "opinion", "corporate", "frontend", "junior", "self
         }
     }
 
-
-
 </style>
+
+<script>
+
+// tomorrow
+// function trackRoute(href) {
+//     let navItem = document.querySelectorAll('.nav-item a');
+//     console.log(navItem);
+//     // check if href path is in the innerHTML of the nav item and add active class
+//     navItem.forEach(item => {
+//         console.log(item.innerHTML);
+//         if(item.innerHTML.toLowerCase().includes(href.toLowerCase())) {
+//             item.classList.add('active');
+//             console.log("active");
+//         } else {
+//             item.classList.remove('active');
+//         }
+//     });
+// }
+
+</script>
