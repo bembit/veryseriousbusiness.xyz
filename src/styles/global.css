@@ -41,8 +41,8 @@
     --text-primary-gradient: #f5515f88;
     --background-primary-gradient: #1b94f161;
     --background-image-span: linear-gradient(45deg, #cc331b, #b10303);
-    --borders: 1px solid var(--tertiary);
-    /* --borders: none; */
+    /* --borders: 1px solid var(--tertiary); */
+    --borders: none;
     --border-zero: 0px;
     --border-small: 5px;
     --border-rounded: 0px;
@@ -112,6 +112,23 @@ a,a:visited {
     color: inherit;
 }
 
+div.tags {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 10px;
+}
+
+a.tag {
+    border: 1px solid var(--text-secondary);
+    padding: 5px 10px;
+    border-radius: var(--border-small);
+    color: var(--text-secondary);
+    background-color: var(--background);
+}
+
 ::selection {
     background-color: var(--text-primary);
     color: var(--secondary);
@@ -127,7 +144,6 @@ button {
     color: var(--text-secondary);
     /* border-radius: var(--border-small); */
     box-shadow: var(--box-shadow);
-    /* font-family: var(--font-primary); */
 }
 
 main {
@@ -151,7 +167,6 @@ article {
     padding-bottom: calc(5% + var(--footer-height));
     padding-top: 5%;
 }
-
 
 aside {
     position: relative;
