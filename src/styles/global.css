@@ -1,12 +1,10 @@
 :root {
     /* default light */
-    --text-primary: #f5515f;
-    --text-secondary: #0b0b0b;
-    --background-primary: #1b96f1;
-    --background-primary-opacity: #1b96f17e;
-    --secondary: #f3f0e8;
-    --secondary-opacity: #f3f0e8d0;
-    --tertiary: #0b0b0b;
+    --text-primary: #0b0b0b;
+    --text-secondary: #f3f0e8;
+    --background: #1b96f1;
+    --secondary: #51f5f2;
+    --tertiary: #deee24;
     /* light */
     --text-primary-light: #f5515f;
     --text-secondary-light: #0b0b0b;
@@ -43,10 +41,11 @@
     --text-primary-gradient: #f5515f88;
     --background-primary-gradient: #1b94f161;
     --background-image-span: linear-gradient(45deg, #cc331b, #b10303);
-    --borders: 3px solid var(--tertiary);
+    --borders: 1px solid var(--tertiary);
+    /* --borders: none; */
     --border-zero: 0px;
     --border-small: 5px;
-    --border-rounded: 25px;
+    --border-rounded: 0px;
     --footer-height: 65px;
 }
 
@@ -61,8 +60,8 @@ body {
     position: relative;
     font-size: 1.6rem;
     line-height: 1.5;
-    background-color: var(--secondary);
-    background-image: var(--background-image);
+    background-color: var(--background);
+    /* background-image: var(--background-image); */
     font-family: 'Material Icons', sans-serif;
     font-family: 'Public Sans Variable', sans-serif;
 }
@@ -71,7 +70,7 @@ body {
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
+    font-size: 24px;
     display: inline-block;
     line-height: 1;
     text-transform: none;
@@ -94,10 +93,13 @@ body {
     box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: var(--font-primary);
-    font-weight: 700;
+h1 {
     color: var(--text-primary);
+}
+
+h2 {
+    font-family: var(--font-primary);
+    color: var(--text-secondary);
     text-transform: capitalize;
 }
 
@@ -115,26 +117,39 @@ a,a:visited {
     color: var(--secondary);
 }
 
+button {
+    font-size: 1.2rem;
+    padding: 5px 14px;
+    font-weight: 900;
+    border: 1px solid var(--text-secondary);
+    cursor: pointer;
+    background-color: var(--text-primary);
+    color: var(--text-secondary);
+    /* border-radius: var(--border-small); */
+    box-shadow: var(--box-shadow);
+    /* font-family: var(--font-primary); */
+}
+
 main {
-    position: relative;
     margin-top: var(--header-height);
+    position: relative;
     display: flex;
     flex-direction: row;
     margin-left: var(--nav-width);
     min-height: 100vh;
-    border-top: 3px solid var(--tertiary);
-    border-left: 3px solid var(--tertiary);
-    border-radius: 25px;
+    border-top: var(--borders);
+    border-left: var(--borders);
+    border-radius: var(--border-rounded);
     border-bottom-left-radius: 0px;
 }
 
 article {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     flex-basis: 75%;
-    padding-top: calc(var(--nav-width) / 5);
-    padding-left: calc(var(--nav-width) / 2);
-    padding-right: calc(var(--nav-width) /2);
-    padding-bottom: calc(var(--footer-height) + 50px);
+    padding-left: var(--header-height);
+    padding-right: var(--header-height);
+    padding-bottom: calc(5% + var(--footer-height));
+    padding-top: 5%;
 }
 
 
@@ -143,10 +158,24 @@ aside {
     display: flex;
     flex-direction: column;
     flex-basis: 25%;
-    padding-top: calc(var(--nav-width) / 10);
-    padding-left: calc(var(--nav-width) / 10);
-    padding-right: calc(var(--nav-width) / 10);
+    padding: 5% 2%;
     border-left: var(--borders);
     border-radius: var(--border-rounded);
     border-bottom-left-radius: var(--border-zero);
+}
+
+@media (max-width: 1400px) {
+    :root {
+        --nav-width: 300px;
+    }       
+}
+
+@media (max-width: 1250px) {
+    :root {
+        --nav-width: 250px;
+    }
+    article {
+        padding-left: calc(var(--header-height) / 2);
+        padding-right: calc(var(--header-height) / 2);
+    } 
 }

@@ -7,13 +7,12 @@ const categories = ["debug", "opinion", "corporate", "frontend", "junior", "self
 
     <Profile />
 
-    <h3>Navigation</h3>
-    
-    <ul>
-        <li><a class="nav-item" href="/">Home</a></li>
-        <li><a class="nav-item" href="/about">About</a></li>
+    <ul class="nav-list">
+        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="/about">About</a></li>
+        <li class="nav-item"><a href="/tags">All Tags</a></li>
         {categories.map((category) => (
-			<li><a class="nav-item" href={`/tags/${category}`}>{category}</a></li>
+			<li class="nav-item" ><a href={`/tags/${category}`}>{category}</a></li>
 		))}
     </ul>
 
@@ -25,12 +24,66 @@ const categories = ["debug", "opinion", "corporate", "frontend", "junior", "self
     nav {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: fixed;
         top: 0;
         left: 0;
         width: var(--nav-width);
         border-radius: var(--border-rounded);
-        border-top: 3px solid var(--tertiary);
+        border-top: var(--borders);
     }
+
+    nav h3 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* align-items: flex-end; */
+        width: 70%;
+        background-color: #0000000a;
+    }
+
+    .nav-item {
+        /* padding: .25rem; */
+        font-weight: 700;
+        /* width: 100%; */
+        margin-top: .5rem;
+        text-align: right;
+    }
+
+    .nav-item a {
+        border-left: 1px solid var(--tertiary);
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        display: inline-block;
+        width: 50%;
+        padding: .5rem .5rem .5rem 15px;
+        font-weight: 700;
+        color: var(--text-primary);
+        /* border-bottom: 3px solid var(--text-primary); */
+        /* box-shadow: var(--box-shadow); */
+        transition: all .3s ease-in-out;
+    }
+
+    .nav-item a:hover {
+        background-color: var(--tertiary);
+        color: var(--text-primary);
+        border-left: 1px solid var(--tertiary);
+        padding-right: 15px;
+        width: 100%;
+
+    }
+
+    @media (max-height: 850px) {
+        nav {
+        }
+    }
+
+
 
 </style>

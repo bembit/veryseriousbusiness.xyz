@@ -6,14 +6,16 @@ const { frontmatter } = Astro.props;
 <BaseLayout pageTitle={frontmatter.title}>
 
     <main>
-
         <article>
+
             <img src={frontmatter.image.url} alt={frontmatter.image.alt} width="500px"/>
             <h1>{frontmatter.title}</h1>
             <div class="tags">
                 {frontmatter.tags.map((tag) => <a class="tag" href={`/tags/${tag}`}>{tag}</a>)}
             </div>
+            <!-- smash in the md content -->
             <slot />
+
         </article>
 
         <aside>
