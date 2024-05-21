@@ -93,8 +93,21 @@ const mainCategories = ["debug", "opinion", "frontend", "junior", "self destruct
         }
     }
 
-    @media (max-height: 850px) {
+    @media (max-width: 950px) {
+        body {
+            /* flex-direction: column; */
+        }
         nav {
+            position: initial;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        nav div {
+            flex-direction: row;
+        }
+        nav ul {
+            display: none;
         }
     }
 
