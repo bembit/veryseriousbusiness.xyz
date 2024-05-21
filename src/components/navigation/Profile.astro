@@ -9,6 +9,7 @@
         <div class="profile-picture">
             <!-- <Image src={selfie} alt='test'/> -->
             <!-- <img src="/src/assets/images/ben.jpg" alt="x" /> -->
+            <button class="close-profile">X</button>
         </div>
         <h2>Bence Madar</h2>
     </div>
@@ -22,7 +23,6 @@
             I once failed as a freelancer for not following the "take the money and run" principle. I happen to find interesting things, bugs.
             <a href="/about.html" class="nav-link">More..</a>
         </p>
-        <button onclick="toggleProfile()">Don't care. x</button>
 
 
 </div>
@@ -38,6 +38,23 @@
         margin-top: 25px;
         margin-top: 10%;
         width: 70%;
+    }
+
+    button.close-profile {
+        position: absolute;
+        width: fit-content;
+        bottom: 0;
+        left:0;
+        padding: .5rem 1rem;
+        transform: translate(-5%, 20%);
+        border-radius: 25px;
+        font-size: .9rem;
+        font-weight: 900;
+        border: none;
+        cursor: pointer;
+        background-color: var(--text-primary);
+        color: var(--text-secondary);
+        box-shadow: var(--box-shadow);
     }
 
     .profile div:first-of-type {
@@ -76,14 +93,8 @@
         margin-left: 10px;
     }
 
-    .profile button {
-        width: 175px;
-        width: 90%;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-
     .profile-picture {
+        position: relative;
         height: 175px;
         width: 175px;
         border-radius: 50%;

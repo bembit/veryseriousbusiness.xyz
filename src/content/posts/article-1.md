@@ -27,13 +27,6 @@ Welcome to my _new blog_ about learning Astro! Here, I will share my learning jo
 
 <h2 class="markdown-heading">What I'll learn next</h2>
 
-<details>
-    <summary>What I'll learn next</summary>
-    <img src="https://docs.astro.build/assets/full-logo-light.png" alt="The full Astro logo.">
-
-    I will continue to learn Astro and build my website.
-</details>
-
 <ul class="markdown-list">
     <li>I will continue to learn Astro and build my website.</li>
     <li>I will also add more posts to my blog.</li>
