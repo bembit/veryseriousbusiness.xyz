@@ -2,13 +2,19 @@
 ---
 
 <header>
+
     <div>
         <h1>VerySeriousBusiness</h1>
         <div class="subtitle"><p>sex.</p><span>love.</span> <p>and</p> <span>debugs.</span></div> 
     </div>
     <div class="tiny-menu">
-        <span class="material-icons">dark_mode</span>
-        <span id="mobile-nav-toggle" class="material-icons">menu</span>
+
+        <button id="themeToggle">
+            <span id="darkMode" class="material-icons">dark_mode</span>
+            <span id="lightMode" class="material-icons">light_mode</span>
+        </button>
+            <span id="mobile-nav-toggle" class="material-icons">menu</span>
+        
         <nav>
             <a href="/">Home</a>
             <a class="nav-link" href="/tags">Tags</a>
@@ -110,12 +116,34 @@
 
     header span.material-icons:hover {
         color: var(--text-secondary);
-        cursor: pointer;
     }
 
     #mobile-nav-toggle {
         display: none;
     }
+
+    #themeToggle {
+        border: none;
+        background: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #darkMode {
+        color: var(--text-primary);
+    }
+    #darkMode:hover {
+        color: var(--text-secondary);
+        cursor: pointer;
+    }
+    #lightMode {
+        color: var(--text-secondary);
+    }
+    #lightMode:hover {
+        color: var(--text-primary);
+        cursor: pointer;
+    }
+
 
     @media (max-width: 1650px) {
         header {
@@ -133,7 +161,7 @@
             display: block;
         }
         header {
-
+            /*  */
             h1 {
                 margin-left: 10px;
                 transform: translateY(-5px);
@@ -239,3 +267,53 @@
     }
 
 </style>
+
+<script>
+
+document.addEventListener('astro:after-swap', () => {
+    const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    applyTheme(currentTheme);
+});
+
+document.addEventListener('astro:page-load', () => {
+    const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    applyTheme(theme);
+
+    document.getElementById("themeToggle").addEventListener("click", handleToggleClick);
+});
+
+function applyTheme(theme) {
+    const root = document.documentElement;
+    const darkModeIcon = document.getElementById("darkMode");
+    const lightModeIcon = document.getElementById("lightMode");
+    // make it a switch case with more themes later
+    if (theme === 'dark') {
+        root.style.setProperty('--text-primary', getComputedStyle(root).getPropertyValue('--text-primary-dark'));
+        root.style.setProperty('--text-secondary', getComputedStyle(root).getPropertyValue('--text-secondary-dark'));
+        root.style.setProperty('--background', getComputedStyle(root).getPropertyValue('--background-primary-dark'));
+        root.style.setProperty('--tertiary', getComputedStyle(root).getPropertyValue('--tertiary-dark'));
+
+        darkModeIcon.style.display = 'none';
+        lightModeIcon.style.display = 'inline';
+    } else {
+        root.style.setProperty('--text-primary', getComputedStyle(root).getPropertyValue('--text-primary-light'));
+        root.style.setProperty('--text-secondary', getComputedStyle(root).getPropertyValue('--text-secondary-light'));
+        root.style.setProperty('--background', getComputedStyle(root).getPropertyValue('--background-primary-light'));
+        root.style.setProperty('--tertiary', getComputedStyle(root).getPropertyValue('--tertiary-light'));
+
+        darkModeIcon.style.display = 'inline';
+        lightModeIcon.style.display = 'none';
+    }
+
+    localStorage.setItem('theme', theme);
+}
+
+function handleToggleClick() {
+    const currentTheme = localStorage.getItem('theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    applyTheme(newTheme);
+}
+
+
+
+</script>
