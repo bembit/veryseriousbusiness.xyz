@@ -98,11 +98,10 @@ h1 {
     color: var(--text-primary);
 }
 
-h2 {
-    font-family: var(--font-primary);
+/* h2 {
     color: var(--text-secondary);
     text-transform: capitalize;
-}
+} */
 
 ul {
     list-style: none;
@@ -244,13 +243,49 @@ aside p {
         padding-left: calc(var(--header-height) / 4);
         padding-right: calc(var(--header-height) / 4);
     } 
+}
 
-    @media (max-width: 1100px) {
-        .desktop-only {
-            display: none;
-        }
-        article {
-            flex-basis: 100%;
-        }
+@media (max-width: 1250px) {
+    body {
+        flex-direction: column;
+    }
+    nav {
+        position: initial;
+    }
+}
+
+@media (max-width: 1100px) {
+    .desktop-only {
+        display: none;
+    }
+    main {
+        flex-direction: column-reverse;
+    }
+    article {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 950px) {
+    main {
+        margin-top: 0;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    :root {
+        /* not bad for mobile */
+        /* --header-height: 50px; */
+        --header-height: 75px;
+    }
+    article {
+        padding: 5px 5px;
+        padding-bottom: var(--footer-height);
+    }
+}
+
+@media (max-height: 800px) {
+    nav {
     }
 }
