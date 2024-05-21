@@ -9,11 +9,11 @@ const mainCategories = ["debug", "opinion", "frontend", "junior", "self destruct
 
     <ul class="nav-list">
         <li class="nav-item"><a href="/">Home</a></li>
-        <li class="nav-item"><a href="/about">About</a></li>
-        <li class="nav-item"><a href="/tags">All Tags</a></li>
+        <li class="nav-item active"><a href="/about">About</a></li>
         {mainCategories.map((category) => (
-			<li class="nav-item" ><a href={`/tags/${category}`}>{category}</a></li> 
+            <li class="nav-item" ><a href={`/tags/${category}`}>{category}</a></li> 
 		))}
+        <li class="nav-item"><a href="/tags">All Tags</a></li>
     </ul>
 
 </nav>
@@ -42,13 +42,15 @@ const mainCategories = ["debug", "opinion", "frontend", "junior", "self destruct
     .nav-list {
         display: flex;
         flex-direction: column;
+        /* flex-direction: row; */
+        /* flex-wrap: wrap;
+        gap: 10px; */
         /* justify-content: center; */
         /* align-items: flex-end; */
         width: 70%;
     }
 
     .nav-item {
-        /* padding: .25rem; */
         font-weight: 700;
         /* width: 100%; */;
         text-align: right;
@@ -57,12 +59,12 @@ const mainCategories = ["debug", "opinion", "frontend", "junior", "self destruct
     }
 
     .nav-item a {
-        border-left: 1px solid var(--text-secondary);
+        border-left: 2px solid var(--transparent-white);
         text-transform: uppercase;
         font-size: 1.2rem;
         display: inline-block;
-        width: 95%;
-        padding: .5rem .5rem .5rem 15px;
+        width: 100%;
+        padding: 1rem .5rem 1rem 1rem;
         font-weight: 700;
         color: var(--text-secondary);
         transition: all .3s ease-in-out;
@@ -78,11 +80,17 @@ const mainCategories = ["debug", "opinion", "frontend", "junior", "self destruct
         width: 100%;
     }
 
-    .active {
-        background-color: var(--text-primary);
-        color: var(--text-secondary);
-        border-left: 3px solid var(--text-primary);
+    .nav-item.active a {
+        background-color: var(--tertiary);
+        color: var(--text-primary);
         padding-right: 15px;
+    }
+
+    @media (max-width: 1400px) {
+        .nav-list {
+            width: 90%;
+
+        }
     }
 
     @media (max-height: 850px) {
