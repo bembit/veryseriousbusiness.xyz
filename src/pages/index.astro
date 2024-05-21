@@ -1,10 +1,9 @@
 ---
+import PostPreview from "../components/posts/PostPreview.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Hello.";
 
-import { getCollection } from 'astro:content';
 
-const allPosts = await getCollection('posts');
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -12,17 +11,21 @@ const allPosts = await getCollection('posts');
 	<main>
 		<article>
 			
-			{allPosts.map(post => (
-				<a href={`/posts/${post.slug}`} title={post.data.title}>
-					<h1>{post.data.title}</h1>
-					<p>{post.data.description}</p>
-				</a>
-			))}
+			<PostPreview />
 
 		</article>
 
-		<aside>
-			no
+		<aside class="desktop-only">
+			<h3>Under construction</h3>
+            <p>having fun? in this economy?</p>
+            <h3>Upcoming</h3>
+            <p>How a React UseEffect dependency array can say hello 42000 times in a minute at MBH Bank.</p>
+            <p>Why does profession.hu has 78 strictly necessary cookies?</p>
+            <p>Is 2024 the full cirlce? Shadcn is the top lib, everyone is bloggin again, jQuery is back, HTMX is good.</p>
+            <p>This is a prototype before full rewrite.</p>
+            <p>No cookies, no localstorage, no nothing.</p>
+			<h3>Previously on Very Serious Business</h3>
+			<p>How I failed my previous blog.</p>
 		</aside>
 	</main>
 

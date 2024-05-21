@@ -32,7 +32,7 @@
         justify-content: space-between;
         color: var(--text-primary);
         padding-left: var(--header-height);
-        padding-right: var(--header-height);
+        padding-right: 25px;
         margin-left: var(--nav-width);
         border-left: var(--borders);
         border-right: var(--borders);
@@ -91,7 +91,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        border-bottom: 1px solid var(--text-secondary);
+        border-bottom: 1px solid var(--transparent-white);
     }
 
     header nav a:not(:last-of-type) {
@@ -118,32 +118,28 @@
         display: none;
     }
 
-    @media (max-width: 1250px) {
+    @media (max-width: 1650px) {
         header {
             padding-left: calc(var(--header-height) / 2);
+            padding-right: calc(var(--header-height) / 4);
         }
     }
 
-    @media screen and (max-width: 1000px) {
-        /* :root { --nav-width: 200px; --header-height: 75px; } html { font-size: 80%; } body { flex-direction: column; }
-        #mobileNav {
-            display: block;
-        } */
+    @media (max-width: 1250px) {
         header {
-            /* width: 100%;
-            position: relative;
-            padding-left: 0px;
-            border-top: 3px solid var(--tertiary);
-            border-right: none;
-            border-bottom: 3px solid var(--tertiary);
-            border-left: none;
-            flex-direction: row;
-            height: var(--header-height);
-            user-select: none;
-            -ms-user-select: none;
-            -webkit-user-select: none; */
+            padding-left: calc(var(--header-height) / 4);
+        }
+    }
+
+    @media screen and (max-width: 1100px) {
+        :root { --nav-width: 200px; --header-height: 75px; } html { font-size: 80%; } body { flex-direction: column; }
+        #mobile-nav-toggle {
+            display: block;
+        }
+        header {
+
             h1 {
-                /* display: none; */
+                display: none;
                 font-size: 1.6rem;
                 margin-left: 10px;
                 text-decoration: none;

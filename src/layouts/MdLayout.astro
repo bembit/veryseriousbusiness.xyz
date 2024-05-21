@@ -6,7 +6,7 @@ const { frontmatter } = Astro.props;
 <BaseLayout pageTitle={frontmatter.title}>
 
     <main>
-        <article>
+        <article class="post">
 
             <img src={frontmatter.image.url} alt={frontmatter.image.alt} width="100%"/>
             <h1>{frontmatter.title}</h1>
@@ -20,7 +20,7 @@ const { frontmatter } = Astro.props;
 
         <aside>
 
-            <p>Written by {frontmatter.author}</p>
+            <span>Written by <p>{frontmatter.author}</p></span>
             <p>Published on {frontmatter.pubDate.toString().slice(0,10)}</p>
             <p>{frontmatter.description}</p>
 
@@ -30,5 +30,15 @@ const { frontmatter } = Astro.props;
 </BaseLayout>
 
 <style>
+
+    aside span {
+        font-size: 1.45rem;
+        color: var(--text-secondary);
+    }
+
+    aside p {
+        font-size: 1.45rem;
+        color: var(--text-primary);
+    }
 
 </style>

@@ -13,10 +13,14 @@
         <h2>Bence Madar</h2>
     </div>
     
-        <div class="profile-socials">social icons</div>
+        <ul class="profile-socials">
+            <li><a href="https://github.com/" target="_blank">github</a></li>
+            <li><a href="https://twitter.com/" target="_blank">twitter</a></li>
+            <li><a href="/rss.xml.js" target="_blank">rss</a></li>
+        </ul>
         <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, nostrum voluptatem hic deleniti exercitationem laudantium beatae at consequuntur doloremque non.
-            <a href="/components/main/about.html" class="nav-link">More..</a>
+            I once failed as a freelancer for not following the "take the money and run" principle. I happen to find interesting things, bugs.
+            <a href="/about.html" class="nav-link">More..</a>
         </p>
         <button onclick="toggleProfile()">Don't care. x</button>
 
@@ -32,7 +36,7 @@
         align-items: center;
         justify-content: center;
         margin-top: 25px;
-        /* margin-top: 10%; */
+        margin-top: 10%;
         width: 70%;
     }
 
@@ -68,6 +72,7 @@
         color: var(--text-secondary);
         text-decoration: underline;
         font-weight: 700;
+        margin-left: 10px;
     }
 
     .profile button {
@@ -91,7 +96,12 @@
     }
 
     .profile-socials {
+        display: flex;
+        gap: 10px;
         height: 40px;
+        font-weight: 700;
+        text-decoration: underline;
+        color: var(--tertiary);
     }
 
     @media (max-width: 1400px) {
@@ -100,11 +110,16 @@
             height: 150px;
             margin-top: 15%;
         }
+        .profile {
+            width: 90%;
+            /* margin-left: 1rem; */
+        }
     }
     @media (max-width: 1250px) {
         .profile-picture {
             margin-top: 10%;
+        }
+
     }
 
-}
 </style>

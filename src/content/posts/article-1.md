@@ -2,7 +2,7 @@
 # layout: '../../layouts/MarkdownPostLayout.astro'
 title: 'My First Test Post'
 pubDate: 2024-04-27 
-description: 'This is the first post of my new blog.'
+description: 'Im baby tumblr 8-bit truffaut bodega boys big mood artisan hammock austin 90s PBR&B single-origin coffee knausgaard. Gochujang vaporware sartorial, typewriter wayfarers williamsburg 3 wolf moon copper mug disrupt church-key ethical blue.' 
 author: 'Bence Madar'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
@@ -12,6 +12,8 @@ tags: ["astro", "blogging", "learning in public"]
 <!-- # My First Blog Post -->
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
+
+<p>this is a paragraph</p>
 
 ## What I've accomplished
 
