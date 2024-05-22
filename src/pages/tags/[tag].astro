@@ -48,11 +48,13 @@ const { posts } = Astro.props;
 
 	<p>todo: tag description here soon</p>
 
-		{posts.map((post) => 
+	<!-- this will be a desktop only thing -->
+	
+		<!-- {posts.map((post) => 
 			<a href={`/posts/${post.slug}`} title={post.data.title}>
 				<p>{post.data.title}</p>
 			</a>
-		)}
+		)} -->
 	</aside>
 
 </main>

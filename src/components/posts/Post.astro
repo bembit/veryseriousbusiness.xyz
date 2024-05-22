@@ -7,8 +7,8 @@ const { post } = Astro.props;
     <div class="preview-tags">
         {post.data.tags.map((tag) => <span class="tag">{tag}</span>)}
     </div>
-    <p>{post.data.description}</p>
     <span>{post.data.pubDate.toString().slice(0,10)}</span>
+    <p>{post.data.description}</p>
     <button>Continue reading</button>
     <!-- <span class="material-icons arrow">
         chevron_right
@@ -20,7 +20,7 @@ const { post } = Astro.props;
         position: relative;
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
         width: 100%;
         padding: 1.5rem 2rem;
         background-color: var(--background-minimal);
@@ -52,7 +52,7 @@ const { post } = Astro.props;
         font-size: 3rem;
         font-weight: 900;
         color: var(--text-secondary);
-        text-transform: capitalize;
+        /* text-transform: capitalize; */
     }
     .post-preview p {
         font-size: 1.6rem;
