@@ -9,39 +9,49 @@ import Post from '../../components/posts/Post.astro';
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const allPosts = await getCollection("posts");
+const allPosts = await getCollection("posts");
 
-  // def not a long term solution. or is it
-  const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+// def not a long term solution. or is it
+const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 
-  return uniqueTags.map((tag) => {
-    const filteredPosts = allPosts.filter((post) => post.data.tags.includes(tag));
-    return {
-      params: { tag },
-      props: { posts: filteredPosts },
-    };
-  });
+return uniqueTags.map((tag) => {
+	const filteredPosts = allPosts.filter((post) => post.data.tags.includes(tag));
+	return {
+	params: { tag },
+	props: { posts: filteredPosts },
+	};
+});
 }
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
+
 ---
 <BaseLayout pageTitle={tag}>
-  <main>
+<main>
 
-    <article>
-      <Type typeTitle={tag} routeTitle="tag" />
-      <ul>
-        {posts.map((post) =>
-          <Post post={post} />
-        )}
-      </ul>
-    </article>
+	<article>
+	<Type typeTitle={tag} routeTitle="tag" />
+	<ul>
+		{posts.map((post) =>
+		<Post post={post} />
+		)}
+	</ul>
+	</article>
 
-    <aside>
-      <p>Posts tagged with `"{tag}`"</p>
-    </aside>
+	<aside>
 
-  </main>
-  
+	<p>
+		{posts.length} posts tagged with "{tag}"
+	</p>
+
+		{posts.map((post) => 
+			<a href={`/posts/${post.slug}`} title={post.data.title}>
+				<p>{post.data.title}</p>
+			</a>
+		)}
+	</aside>
+
+</main>
+
 </BaseLayout>

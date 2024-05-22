@@ -9,7 +9,7 @@ const mainCategories = ["debug", "opinion", "self destruct"]
 
     <ul class="nav-list">
         <li class="nav-item"><a href="/">Home</a></li>
-        <li class="nav-item active"><a href="/about">About</a></li>
+        <li class="nav-item"><a href="/about">About</a></li>
         {mainCategories.map((category) => (
             <li class="nav-item" ><a href={`/tags/${category}`}>{category}</a></li> 
 		))}
@@ -66,7 +66,7 @@ const mainCategories = ["debug", "opinion", "self destruct"]
         padding: 1rem .5rem 1rem 1rem;
         font-weight: 700;
         color: var(--text-secondary);
-        transition: all .3s ease-in-out;
+        /* transition: all .3s ease-in-out; */
         /* ok this one is accidental but I like it */
         margin-right: 1rem;
     }
@@ -74,7 +74,7 @@ const mainCategories = ["debug", "opinion", "self destruct"]
     .nav-item a:hover {
         background-color: var(--tertiary);
         color: var(--text-primary);
-        padding-right: 15px;
+        /* padding-right: 15px; */
         width: 100%;
     }
 
@@ -117,20 +117,26 @@ const mainCategories = ["debug", "opinion", "self destruct"]
 
 <script>
 
-// tomorrow
-// function trackRoute(href) {
-//     let navItem = document.querySelectorAll('.nav-item a');
-//     console.log(navItem);
-//     // check if href path is in the innerHTML of the nav item and add active class
-//     navItem.forEach(item => {
-//         console.log(item.innerHTML);
-//         if(item.innerHTML.toLowerCase().includes(href.toLowerCase())) {
-//             item.classList.add('active');
-//             console.log("active");
-//         } else {
-//             item.classList.remove('active');
-//         }
-//     });
-// }
+function trackRoute() {
+    const navItems = document.querySelectorAll('.nav-item');
+    const currentPath = window.location.pathname;
+
+    navItems.forEach(navItem => {
+        const link = navItem.querySelector('a');
+        const itemPath = link.getAttribute('href');
+
+        if (currentPath === itemPath) {
+            navItem.classList.add('active');
+        } else {
+            navItem.classList.remove('active');
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', trackRoute);
+document.addEventListener('astro:after-swap', trackRoute);
+document.addEventListener('astro:page-load', trackRoute);
+
+
 
 </script>
