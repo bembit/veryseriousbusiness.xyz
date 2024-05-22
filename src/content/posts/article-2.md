@@ -1,25 +1,23 @@
 ---
-# layout: '../../layouts/MarkdownPostLayout.astro'
-title: 'My Second Blog Post'
+title: 'Why does profession.hu have 78 strictly necessary cookies?'
 pubDate: 2024-04-27 
-description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
-image:
-    url: 'https://docs.astro.build/assets/full-logo-light.png'
-    alt: 'The full Astro logo.'
-tags: ["debug", "frontend", "opinion"]
+description: 'Why does profession.hu has 78 strictly necessary cookies? And why do some of them link to codepen.io?'
+author: 'Bence Madar'
+# image:
+#     url: 'required'
+#     alt: 'required'
+tags: ["debug", "investigation", "hardway"]
 ---
-# My second Blog Post
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
 ## What I've accomplished
 
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
+**Installing Astro**: First, I created a new Astro project and set up my online accounts.
 
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
+**Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
 
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
+**Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
 
 ## What's next
 

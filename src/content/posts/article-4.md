@@ -1,7 +1,7 @@
 ---
-title: 'MBH Bank React Slider.'
-pubDate: 2024-05-05 
-description: 'How a React UseEffect dependency array can say hello 42000 times in a minute.'
+title: 'Writing my own routing in javascript.'
+pubDate: 2024-05-01 
+description: 'Part 2. Story of a failure. I can do HTMX in vanilla. Sure I can, just not with my edge case AWS deployment.'
 author: 'Bence Madar'
 # image:
 #     url: 'required'
@@ -36,6 +36,7 @@ Welcome to my _new blog_ about learning Astro! Here, I will share my learning jo
 ## What's next
 
 I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 

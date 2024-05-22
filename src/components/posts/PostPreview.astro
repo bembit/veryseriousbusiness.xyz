@@ -3,16 +3,27 @@ import { getCollection } from 'astro:content';
 import Type from './Type.astro';
 import Post from './Post.astro';
 
-const allPosts = await getCollection('posts');
+let allPosts = await getCollection('posts');
+// or just .reverse() but this looks more badass isn't it.
+allPosts = allPosts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 
 ---
 
-<!-- this could take a prop and render for each tag -->
+<Type typeTitle="preview." routeTitle="home" />
 
-<Type typeTitle="previews" routeTitle="home" />
+<!-- <div class="post-preview-container"> -->
 
 {allPosts.map(post => (
 
     <Post post={post} />
 
 ))}
+
+<!-- </div> -->
+
+<style>
+    .post-preview-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+</style>

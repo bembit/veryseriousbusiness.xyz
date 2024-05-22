@@ -10,7 +10,7 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 <BaseLayout pageTitle={pageTitle}>
 <main>
     <article>
-        <Type typeTitle="alltags" routeTitle="tags" />
+        <Type typeTitle="alltags." routeTitle="tags" />
         <div class="tags">
             {tags.map((tag) => <a class="tag" href={`/tags/${tag}`}>{tag}</a>)}
         </div>

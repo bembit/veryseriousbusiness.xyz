@@ -2,11 +2,16 @@
 const { routeTitle, typeTitle } = Astro.props;
 ---
 
-<h3 class="typography-route">/{routeTitle}</h3>
-<h2 class="typography-title"><span>/</span>{typeTitle}</h2>
+<!-- <h3 class="typography-route">/{routeTitle}</h3> -->
+<h2 class="typography-title">
+    <span>/</span>
+    {typeTitle}
+    <div>.thisisaplaceholderandatest/</div>
+</h2>
 
 <style>
     .typography-title {
+        position: relative;
         /* line-height: 200px; */
         display: flex;
         width: 100%;
@@ -18,11 +23,18 @@ const { routeTitle, typeTitle } = Astro.props;
         span {
             z-index: -1;
         }
+        div {
+            position: absolute;
+            top: 16%;
+            font-size: 3vw;
+            color: var(--text-secondary);
+        }
     }
     .typography-route {
         display: flex;
         width: 100%;    
         font-weight: 900;
+        /* look into this */
         font-size: 3vw;
         text-transform: lowercase;
         color: var(--text-secondary);

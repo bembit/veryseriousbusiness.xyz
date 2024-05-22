@@ -41,11 +41,6 @@ import MobileNav from "./MobileNav.astro";
         border-radius: var(--border-rounded);
     }
 
-    header .tiny-menu {
-        position: relative;
-        user-select: none;
-    }
-
     header h1 {
         font-weight: 900;
     }
@@ -89,7 +84,7 @@ import MobileNav from "./MobileNav.astro";
 
     header > .tiny-menu {
         padding: 1rem 2rem;
-        background-color: #0000000a;
+        background-color: var(--background-minimal);
         font-weight: 700;
         text-transform: uppercase;
         font-size: 1.4rem;
@@ -97,6 +92,8 @@ import MobileNav from "./MobileNav.astro";
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        position: relative;
+        user-select: none;
     }
 
     header span.material-icons {
@@ -153,7 +150,6 @@ import MobileNav from "./MobileNav.astro";
                 top: 45%;
                 left: 20%;
                 font-size: 1rem;
-                /* transform: translateY(-5px); */
             }
             div.subtitle p:first-of-type {
                 transform: translateX(10px);
@@ -173,7 +169,6 @@ import MobileNav from "./MobileNav.astro";
             position: relative;
             margin-left: 0;
             h1 {
-                /* font-size: 1.8rem; */
                 margin-left: 0;
             }
             div.subtitle {
@@ -276,6 +271,7 @@ function applyTheme(theme) {
         root.style.setProperty('--text-primary', getComputedStyle(root).getPropertyValue('--text-primary-dark'));
         root.style.setProperty('--text-secondary', getComputedStyle(root).getPropertyValue('--text-secondary-dark'));
         root.style.setProperty('--background', getComputedStyle(root).getPropertyValue('--background-primary-dark'));
+        root.style.setProperty('--background-minimal', getComputedStyle(root).getPropertyValue('--background-minimal-dark'));
         root.style.setProperty('--tertiary', getComputedStyle(root).getPropertyValue('--tertiary-dark'));
 
         darkModeIcon.style.display = 'none';
@@ -284,6 +280,7 @@ function applyTheme(theme) {
         root.style.setProperty('--text-primary', getComputedStyle(root).getPropertyValue('--text-primary-light'));
         root.style.setProperty('--text-secondary', getComputedStyle(root).getPropertyValue('--text-secondary-light'));
         root.style.setProperty('--background', getComputedStyle(root).getPropertyValue('--background-primary-light'));
+        root.style.setProperty('--background-minimal', getComputedStyle(root).getPropertyValue('--background-minimal-light'));
         root.style.setProperty('--tertiary', getComputedStyle(root).getPropertyValue('--tertiary-light'));
 
         darkModeIcon.style.display = 'inline';
