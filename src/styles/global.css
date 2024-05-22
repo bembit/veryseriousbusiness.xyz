@@ -11,9 +11,9 @@
     --tertiary-light: #deee24;
     /* dark */
     --text-primary-dark: #beddf2;
-    --text-secondary-dark: #731fb4;
+    --text-secondary-dark: #d41394;
     --background-primary-dark: #000a12;
-    --tertiary-dark: #8e2ef7;
+    --tertiary-dark: #9f046c;
     /* mine */
     /* 4062BB */
     /* FF7F11 */
@@ -105,7 +105,6 @@ article div.tags {
     flex-wrap: wrap;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -141,7 +140,7 @@ main {
     display: flex;
     flex-direction: row;
     margin-left: var(--nav-width);
-    min-height: 100vh;
+    /* min-height: 100vh; */
     border-top: var(--borders);
     border-left: var(--borders);
     border-radius: var(--border-rounded);
@@ -150,6 +149,7 @@ main {
 
 article {
     width: 100%;
+    min-height: 100svh;
     color: var(--text-primary);
     flex-basis: 75%;
     padding-left: var(--header-height);
@@ -272,7 +272,10 @@ aside p {
     }
     article {
         padding: 5px 5px;
-        padding-bottom: var(--footer-height);
+        padding-bottom: calc(var(--footer-height) + 25px);
+    }
+    main {
+        /* min-height: 100svh; */
     }
 }
 

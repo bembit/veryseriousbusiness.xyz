@@ -1,6 +1,6 @@
 ---
 import Profile from './Profile.astro';
-const mainCategories = ["debug", "opinion", "frontend", "junior", "self destruct"]
+const mainCategories = ["debug", "opinion", "self destruct"]
 ---
 
 <nav>
@@ -59,7 +59,6 @@ const mainCategories = ["debug", "opinion", "frontend", "junior", "self destruct
     }
 
     .nav-item a {
-        border-left: 2px solid var(--transparent-white);
         text-transform: uppercase;
         font-size: 1.2rem;
         display: inline-block;
@@ -75,7 +74,6 @@ const mainCategories = ["debug", "opinion", "frontend", "junior", "self destruct
     .nav-item a:hover {
         background-color: var(--tertiary);
         color: var(--text-primary);
-        /* border-left: 3px solid var(--tertiary); */
         padding-right: 15px;
         width: 100%;
     }

@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Type from './Type.astro';
+import Post from './Post.astro';
 
 const allPosts = await getCollection('posts');
 
@@ -8,67 +9,10 @@ const allPosts = await getCollection('posts');
 
 <!-- this could take a prop and render for each tag -->
 
-
 <Type typeTitle="previews" routeTitle="home" />
 
 {allPosts.map(post => (
 
-    <a class="post-preview" href={`/posts/${post.slug}`} title={post.data.title}>
-        <h1>{post.data.title}</h1>
-        {/* <div class="tags">
-            {post.data.tags.map((tag) => <span class="tag">{tag}</span>)}
-        </div> */}
-        <p>{post.data.description}</p>
-        <span>{post.data.pubDate.toString().slice(0,10)}</span>
-        <button>Continue reading</button>
-    </a>
+    <Post post={post} />
 
 ))}
-
-<style>
-    .post-preview {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        width: 100%;
-        padding: 2rem 3rem;
-        background-color: #00000008; 
-        transition: all .2s ease-in-out;
-        border-left: 2px solid transparent;
-    }
-    .post-preview:hover {
-        background-color: rgba(0, 0, 0, 0.086);
-        border-left: 2px solid var(--transparent-white);
-    }
-    .post-preview h1 {
-        font-size: 3rem;
-        font-weight: 900;
-        color: var(--text-secondary);
-        text-transform: capitalize;
-    }
-    .post-preview p {
-        font-size: 1.6rem;
-        color: var(--text-primary);
-    }
-    .post-preview span {
-        font-size: 1.2rem;
-        color: var(--text-secondary);
-    }
-    .post-preview button {
-        font-size: 1.2rem;
-        padding: .75rem 2rem;
-        background-color: var(--text-primary);
-        color: var(--text-secondary);
-        /* border-radius: var(--border-small); */
-        border: none;
-        width: fit-content;
-    }
-    .post-preview:not(:last-of-type) {
-        margin-bottom: 3rem;
-    }
-    @media (max-width: 500px) {
-        .post-preview {
-            padding: 5px 5px;
-        }
-    }
-</style>
