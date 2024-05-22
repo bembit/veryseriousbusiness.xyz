@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Type from "../../components/posts/Type.astro";
-import Profile from "../../components/navigation/Profile.astro";
 const pageTitle = "About.";
 ---
 
@@ -14,7 +13,7 @@ const pageTitle = "About.";
         <article>
             <Type typeTitle="aboutme" routeTitle="about" />
             <div class="about-container">
-                <Profile />
+                <p>todo: splitting profile to multiple components so can be reused here</p>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima ad nihil ipsam ratione neque, eaque quam! Minus nulla aut odit minima, culpa libero quisquam cupiditate voluptate, illum tempora rerum, voluptas facere impedit. Ipsa, facere. Possimus, porro officia sapiente repellendus corporis repellat consectetur quas praesentium. Ratione molestiae doloremque cum, dolore nam eligendi. Optio fugit nesciunt eligendi quaerat ratione vel quasi? Possimus cumque qui natus sit ad excepturi voluptates nam expedita eaque ipsam neque voluptatibus, incidunt quis corporis a iure debitis necessitatibus totam. Voluptas veritatis optio, aspernatur magnam error molestias quod! Perspiciatis suscipit ullam, tempora est tenetur deleniti inventore quibusdam maiores officia assumenda adipisci impedit iusto commodi asperiores saepe possimus vel nam a eligendi quam corrupti repudiandae! Fuga magni repudiandae, in officiis hic earum consectetur sequi voluptate ratione sed nulla rerum at aliquid culpa fugit, mollitia quidem incidunt facere animi error explicabo soluta. Quisquam corrupti veniam quasi ipsam. Incidunt itaque perspiciatis ad.</p>
             </div>
         </article>
@@ -50,8 +49,8 @@ const pageTitle = "About.";
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100%;
-        height: 100vh;
+        /* width: 100%; */
+        /* height: 100vh; */
     }
     .about-container p {
         margin-top: 3rem;
