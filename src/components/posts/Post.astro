@@ -4,25 +4,46 @@ const { post } = Astro.props;
 
 <a class="post-preview" href={`/posts/${post.slug}`} title={post.data.title}>
     <h1>{post.data.title}</h1>
-    {/* <div class="tags">
+    <div class="preview-tags">
         {post.data.tags.map((tag) => <span class="tag">{tag}</span>)}
-    </div> */}
+    </div>
     <p>{post.data.description}</p>
     <span>{post.data.pubDate.toString().slice(0,10)}</span>
     <button>Continue reading</button>
+    <!-- <span class="material-icons arrow">
+        chevron_right
+    </span> -->
 </a>
 
 <style>
     .post-preview {
+        position: relative;
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
         width: 100%;
-        padding: 2rem 3rem;
-        background-color: #00000008; 
+        padding: 1.5rem 2rem;
+        background-color: var(--background-minimal);
         transition: all .2s ease-in-out;
         border-left: 2px solid transparent;
     }
+    .preview-tags {
+        display: flex;
+        gap: 1rem;
+    }
+    span.tag {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--text-secondary);
+        background-color: var(--transparent-white);
+        padding: .5rem 1rem;
+    }
+    /* .arrow {
+        position: absolute;
+        right: 20px;
+        top: 1.5rem;
+        font-size: 100px;
+    } */
     .post-preview:hover {
         background-color: rgba(0, 0, 0, 0.086);
         border-left: 2px solid var(--transparent-white);
@@ -37,7 +58,7 @@ const { post } = Astro.props;
         font-size: 1.6rem;
         color: var(--text-primary);
     }
-    .post-preview span {
+    .post-preview span:not(.arrow) {
         font-size: 1.2rem;
         color: var(--text-secondary);
     }

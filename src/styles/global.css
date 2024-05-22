@@ -3,16 +3,19 @@
     --text-primary: #0b0b0b;
     --text-secondary: #f3f0e8;
     --background: #1d97f5;
+    --background-minimal: #0000000a;
     --tertiary: #deee24;
     /* light */
     --text-primary-light: #0b0b0b;
     --text-secondary-light: #f3f0e8;
     --background-primary-light: #1b96f1;
+    --background-minimal-light: #0000000a;
     --tertiary-light: #deee24;
     /* dark */
     --text-primary-dark: #beddf2;
     --text-secondary-dark: #d41394;
     --background-primary-dark: #000a12;
+    --background-minimal-dark: transparent; 
     --tertiary-dark: #9f046c;
     /* mine */
     /* 4062BB */
@@ -36,14 +39,8 @@
     --footer-height: 65px;
 }
 
-:root.dark {
-    background-color: #0d0950;
-    color: #fff;
-}
-
 html {
     font-size: 67.5%;
-    font-family: var(--font-regular);
 }
 
 body {
@@ -87,11 +84,6 @@ h1 {
     color: var(--text-primary);
 }
 
-/* h2 {
-    color: var(--text-secondary);
-    text-transform: capitalize;
-} */
-
 ul {
     list-style: none;
 }
@@ -134,14 +126,12 @@ button:not(#themeToggle, .close-profile) {
     box-shadow: var(--box-shadow);
 }
 
-
 main {
     margin-top: var(--header-height);
     position: relative;
     display: flex;
     flex-direction: row;
     margin-left: var(--nav-width);
-    /* min-height: 100vh; */
     border-top: var(--borders);
     border-left: var(--borders);
     border-radius: var(--border-rounded);
@@ -156,7 +146,6 @@ article {
     padding-left: var(--header-height);
     padding-right: var(--header-height);
     padding-bottom: calc(5% + var(--footer-height));
-    /* padding-top: 5%; */
 }
 
 /* post HTML styles */
@@ -177,7 +166,6 @@ article {
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 1.6rem;
-    /* color: red; */
 }
 
 .post span {
@@ -191,7 +179,7 @@ aside {
     display: flex;
     flex-direction: column;
     flex-basis: 25%;
-    padding: 5% 0% 5% 0%;
+    padding: 0% 0% 5% 0%;
     margin-right: 25px;
     /* background-color: #0000000a; */
 }
@@ -210,7 +198,7 @@ aside p {
     font-size: 1.4rem;
     margin-top: .5rem;
     margin-bottom: .5rem;
-    background-color: #0000000a;
+    background-color: var(--background-minimal);
     color: var(--text-secondary);
 
 }

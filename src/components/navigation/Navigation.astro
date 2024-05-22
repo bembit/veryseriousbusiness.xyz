@@ -1,6 +1,6 @@
 ---
 import Profile from './Profile.astro';
-const mainCategories = ["debug", "opinion", "self destruct"]
+const mainCategories = ["debug", "opinion", "hardway"]
 ---
 
 <nav>
@@ -8,6 +8,7 @@ const mainCategories = ["debug", "opinion", "self destruct"]
     <Profile />
 
     <!-- this should be split further -->
+    <!-- I hate this nav, will rewrite tomorrow -->
 
     <ul class="nav-list">
         <li class="nav-item"><a href="/">Home</a></li>
@@ -57,7 +58,7 @@ const mainCategories = ["debug", "opinion", "self destruct"]
         font-weight: 700;
         /* width: 100%; */;
         text-align: right;
-        background-color: #0000000a;
+        background-color: var(--background-minimal);
         margin-top: .35rem;
     }
 
@@ -66,7 +67,7 @@ const mainCategories = ["debug", "opinion", "self destruct"]
         font-size: 1.2rem;
         display: inline-block;
         width: 100%;
-        padding: 1rem .5rem 1rem 1rem;
+        padding: 1rem 15px 1rem 1rem;
         font-weight: 700;
         color: var(--text-secondary);
         /* transition: all .3s ease-in-out; */
@@ -84,7 +85,7 @@ const mainCategories = ["debug", "opinion", "self destruct"]
     .nav-item.active a {
         background-color: var(--tertiary);
         color: var(--text-primary);
-        padding-right: 15px;
+        padding-right: 30px;
     }
 
     @media (max-width: 1400px) {
