@@ -1,4 +1,5 @@
 ---
+import MobileNav from "./MobileNav.astro";
 ---
 
 <header>
@@ -13,12 +14,7 @@
             <span id="darkMode" class="material-icons">dark_mode</span>
             <span id="lightMode" class="material-icons">light_mode</span>
         </button>
-            <span id="mobile-nav-toggle" class="material-icons">menu</span>
-        
-        <nav>
-            <a href="/">Home</a>
-            <a class="nav-link" href="/tags">Tags</a>
-        </nav>
+        <MobileNav />
     </div>
 
 </header>
@@ -43,6 +39,11 @@
         border-left: var(--borders);
         border-right: var(--borders);
         border-radius: var(--border-rounded);
+    }
+
+    header .tiny-menu {
+        position: relative;
+        user-select: none;
     }
 
     header h1 {
@@ -86,7 +87,7 @@
 
     /* right side tiny menu */
 
-    header > div:last-of-type {
+    header > .tiny-menu {
         padding: 1rem 2rem;
         background-color: #0000000a;
         font-weight: 700;
@@ -96,30 +97,15 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        /* border-bottom: 1px solid var(--transparent-white); */
-    }
-
-    header nav a:not(:last-of-type) {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    header nav a:hover {
-        color: var(--text-secondary);
     }
 
     header span.material-icons {
         font-size: 2.6rem;
         display: inline-block;
-        margin-right: 1rem;
     }
 
     header span.material-icons:hover {
         color: var(--text-secondary);
-    }
-
-    #mobile-nav-toggle {
-        display: none;
     }
 
     #themeToggle {
@@ -144,7 +130,6 @@
         cursor: pointer;
     }
 
-
     @media (max-width: 1650px) {
         header {
             padding-left: calc(var(--header-height) / 2);
@@ -157,9 +142,6 @@
         }
     }
     @media screen and (max-width: 1100px) {
-        #mobile-nav-toggle {
-            display: block;
-        }
         header {
             /*  */
             h1 {
@@ -213,9 +195,7 @@
                 transform: rotate(-5deg);
             }
         }
-        header nav {
-            display: none;
-        }
+
         header span.material-icons:not(:nth-child(1)) {
             margin-right: 0;
         }
@@ -263,6 +243,11 @@
         header > div:last-of-type {
             border-bottom: none;
             /* background: initial; */
+        }
+        header .tiny-menu {
+            padding-left: 0;
+            background-color: inherit;
+
         }
     }
 
@@ -313,7 +298,5 @@ function handleToggleClick() {
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     applyTheme(newTheme);
 }
-
-
 
 </script>
