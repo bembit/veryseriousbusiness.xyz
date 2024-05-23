@@ -43,6 +43,10 @@ html {
     font-size: 67.5%;
 }
 
+body.load {
+    display: none;
+}
+
 body {
     display: flex;
     flex-direction: column;
