@@ -20,17 +20,17 @@ const { frontmatter } = Astro.props;
 
         <aside>
 
-            <span>Written by <p>{frontmatter.author}</p></span>
+            <p>Written by <span>{frontmatter.author}</span></p>
             <p>Published on {frontmatter.pubDate.toString().slice(0,10)}</p>
-            <p>{frontmatter.description}</p>
-
+            <!-- <p>{frontmatter.description}</p> -->
+            arrow right, hide
         </aside>
 
     </main>
 </BaseLayout>
 
 <style>
-
+    /* move these? */
     aside span {
         font-size: 1.45rem;
         color: var(--text-secondary);
