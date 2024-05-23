@@ -158,7 +158,7 @@ article {
     font-size: 3rem;
     font-weight: 900;
     color: var(--text-secondary);
-    text-transform: lowercase;
+    text-transform: capitalize;
 }
 
 .post h2 {
@@ -166,15 +166,31 @@ article {
     margin-bottom: 2rem;
 }
 
+.post a:not(.tag) {
+    color: var(--tertiary);
+}
 .post p {
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 1.6rem;
+    font-weight: 500;
 }
-
+.post p:first-of-type {
+    margin-top: 5rem;
+}
+.post p:last-of-type {
+    margin-bottom: 5rem;
+}
+.post p:has(+ img) {
+    margin-bottom: 3rem;
+}
 .post span {
     font-size: 1.2rem;
     color: var(--text-secondary);
+}
+.post img {
+    width: contain;
+    max-width: 100%;
 }
 
 aside {

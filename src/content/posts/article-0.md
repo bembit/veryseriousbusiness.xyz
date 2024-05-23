@@ -9,25 +9,4 @@ author: 'Bence Madar'
 tags: ["debug", "junior"]
 ---
 
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
-
-<p>this is a paragraph</p>
-
-## What I've accomplished
-
-**Installing Astro**: First, I created a new Astro project and set up my online accounts.
-
-**Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
-
-**Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
-
-## What's next
-
-<h2 class="markdown-heading">What I'll learn next</h2>
-
-<ul class="markdown-list">
-    <li>I will continue to learn Astro and build my website.</li>
-    <li>I will also add more posts to my blog.</li>
-</ul>
-
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+empty.
