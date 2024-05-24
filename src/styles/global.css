@@ -167,7 +167,6 @@ article {
     margin-bottom: 2rem;
     color: var(--tertiary);
     font-weight: 900;
-    text-decoration: underline;
 }
 
 .post .tags:has(+ img) {
@@ -226,6 +225,7 @@ article {
     color: var(--text-secondary);
 }
 .post img {
+    /* width: 100%; */
     max-width: 100%;
 }
 .post img:first-of-type:not(details img) {
@@ -335,14 +335,17 @@ aside p {
         --header-height: 75px;
     }
     article {
-        padding: 5px 5px;
+        padding: 10px 10px; 
         padding-bottom: calc(var(--footer-height) + 25px);
     }
     .post p {
         font-size: 18px;
     }
+    .post p.middle {
+        padding: 0 10%;
+    }
     aside {
-        padding: 5px 5px;
+        padding: 10px 10px; 
     }
     main {
         /* min-height: 100svh; */
