@@ -18,7 +18,7 @@ Fortunately I couldn't really find a position I was interested in, but I managed
 ## Part 2 - My problem with these.
 
 <details>
-    <summary>click to open. <b>your average junior angular dev</b></summary>
+    <summary>click to open - <b>your average junior angular dev</b></summary>
     <img src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/image2-min.png" alt="Your average junior angular developer job ad.">
 </details>
 
@@ -84,7 +84,7 @@ flex-wrap:wrap;
 gap:12px;
 ```
 
-I wasn’t sure if this was some bootstrap issue that developed over time, or these filters were just implemented later. A band aid solution of sorts to the request of an overzealous PM. My money is on the latter part, as we continue to dive in. Later I checked it on the wayback machine. It’s like this for almost a year, <a class="offlink" href="https://web.archive.org/web/20230922203632/https://www.deutschetelekomitsolutions.hu/en/open-positions/">here's the link,</a> if you care.
+I wasn’t sure if this was some bootstrap issue that developed over time, or these filters were just implemented later. A band aid solution of sorts to the request of an overzealous PM. My money is on the latter part, as we continue to dive in. Later I checked it on the wayback machine. It’s like this for almost a year, <a href="https://web.archive.org/web/20230922203632/https://www.deutschetelekomitsolutions.hu/en/open-positions/">here's the link,</a> if you care.
 
 
 The CSS:after.
@@ -122,15 +122,15 @@ Here I was able to confirm that it takes the wrong response, usually the value f
 
 <img src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/image7-min.png" alt="asd">
 
-Does a button click for each element.
+Does a button click for each search tag element.
 
 ### In human language:
 
-Whenever you press the Delete Filters button, the jQuery function starts targeting each single filter element, removes it from the view, and asks the server for a response. And keeps doing this for each single filter tag you applied, sending a request for each. These single filter tag removals happen quite fast, so the requests sent by them happen almost simultaneously. Whichever of these filter requests wins the race, gets to be king of the screen. 
+Whenever you press the Delete Filters button, the jQuery function starts targeting each single filter element, removes it from the view, and asks the server for a response. And keeps doing this for each single filter tag you applied, sending a request for each. These single filter tag removals happen quite fast, so the requests sent by them happen almost simultaneously. Whichever of these filter requests wins the race, gets to be king of the screen.
 
 <img src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/image8-min.png" alt="asd">
 
-You can check it out <a class="offlink" href="https://www.deutschetelekomitsolutions.hu/en/open-positions/">HERE.</a>
+You can check it out <a href="https://www.deutschetelekomitsolutions.hu/en/open-positions/">here.</a>
 
 ### How to fix this?
 
@@ -138,7 +138,7 @@ Hire more junior frontenders with Kubernetes? Your devs probably know. Just canc
 
 ### Credit where credit is due.
 
-It's great to see jQuery from the 2010s, still in prod. Even if <a class="offlink" href="https://web.archive.org/web/20201124150805/https://www.deutschetelekomitsolutions.hu/karrier/nyitott-poziciok/">the site is from 2020.</a>, I'm sure it was just copied over from the previous. A good representation of not needing React and gigabundlers for everything to exist and be functional, even in 2024. Well, mostly functional. 
+It's great to see jQuery from the 2010s, still in prod. Even if <a href="https://web.archive.org/web/20201124150805/https://www.deutschetelekomitsolutions.hu/karrier/nyitott-poziciok/">the site is from 2020.</a>, I'm sure it was just copied over from the previous. A good representation of not needing React and gigabundlers for everything to exist and be functional, even in 2024. Well, mostly functional. 
 
 
 ## Until next time, my sweet Magenta Princess.
