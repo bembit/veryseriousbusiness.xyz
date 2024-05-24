@@ -4,11 +4,10 @@ import Type from './Type.astro';
 import Post from './Post.astro';
 
 let allPosts = await getCollection('posts');
-// or just .reverse() but this looks more badass isn't it.
 allPosts = allPosts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 
 ---
-
+<!-- this should be renamed, kinda like index -->
 <Type typeTitle="preview." routeTitle="home" />
 
 <!-- <div class="post-preview-container"> -->

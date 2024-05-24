@@ -15,7 +15,7 @@
     --text-primary-dark: #beddf2;
     --text-secondary-dark: #d41394;
     --background-primary-dark: #000a12;
-    --background-minimal-dark: transparent; 
+    --background-minimal-dark: #4742421c; 
     --tertiary-dark: #9f046c;
     /* mine */
     /* 4062BB */
@@ -32,6 +32,7 @@
     --background-primary-gradient: #1b94f19e;
     --background-image-span: linear-gradient(45deg, #cc331b, #b10303);
     /* --borders: 1px solid var(--tertiary); */
+    /* --white : #fff; */
     --borders: none;
     --border-zero: 0px;
     --border-small: 5px;
@@ -162,35 +163,82 @@ article {
 }
 
 .post h2 {
-    margin-top: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    color: var(--tertiary);
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.post .tags:has(+ img) {
     margin-bottom: 2rem;
 }
 
 .post a:not(.tag) {
     color: var(--tertiary);
 }
+.post pre {
+    padding: 1rem 2rem;
+}
 .post p {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-size: 1.6rem;
+    font-size: 19px;
     font-weight: 500;
+    color: var(--white)
+}
+.post p.middle {
+    padding: 0rem 25%;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    /* text-decoration: underline; */
+    font-weight: 900;
+    line-height: 1.9;
+}
+/* .post p.middle > span {
+    padding: .5rem 0rem;
+    color: var(--text-secondary);
+    background-color: var(--text-primary);
+} */
+
+.post details {
+
+} 
+.post details summary {
+    /* background-color: var(--text-secondary); */
+}
+.post details img {
+    width: 100%;
 }
 .post p:first-of-type {
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 .post p:last-of-type {
     margin-bottom: 5rem;
 }
-.post p:has(+ img) {
-    margin-bottom: 3rem;
+.post p:has(+ img), .post p:has(+ video) {
+    margin-bottom: 2rem;
 }
-.post span {
+.post span:not(.middle > span) {
     font-size: 1.2rem;
     color: var(--text-secondary);
 }
 .post img {
-    width: contain;
     max-width: 100%;
+}
+.post img:first-of-type:not(details img) {
+    border: 3px solid var(--tertiary);
+}
+.post ul {  
+    list-style: square;
+    background-color: var(--background-minimal);
+    padding: 1rem 2rem;
+}
+
+.post ul li {
+    margin-left: 1rem;
 }
 
 aside {
@@ -289,6 +337,9 @@ aside p {
     article {
         padding: 5px 5px;
         padding-bottom: calc(var(--footer-height) + 25px);
+    }
+    .post p {
+        font-size: 18px;
     }
     aside {
         padding: 5px 5px;

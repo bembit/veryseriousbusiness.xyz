@@ -20,10 +20,12 @@ const { frontmatter } = Astro.props;
 
         <aside>
 
-            <p>Written by <span>{frontmatter.author}</span></p>
-            <p>Published on {frontmatter.pubDate.toString().slice(0,10)}</p>
+            <p>Published on <span>{frontmatter.pubDate.toString().slice(0,10)}</span></p> 
             <!-- <p>{frontmatter.description}</p> -->
-            arrow right, hide
+            <p>arrow right, hide</p>
+            <p>change article color (secondary, primary swap)</p>
+            <p>will add a navigation / content here and make it fixed position on desktop</p>
+            <p>implement lazy loading images</p>
         </aside>
 
     </main>
