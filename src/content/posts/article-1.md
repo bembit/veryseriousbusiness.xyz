@@ -5,7 +5,7 @@ description: 'A long overdue CSS fix. A race condition. And lots of ranting.'
 author: 'Bence Madar'
 tags: ["opinion", "debug", "nsfw","junior"]
 ---
-<img src="/src/assets/posts/1-tkom/hero.png" alt="Initial bugged CSS.">
+<img src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/hero.png" alt="Initial bugged CSS.">
 
 ## Part 1 - Casually looking.
 
@@ -19,7 +19,7 @@ Fortunately I couldn't really find a position I was interested in, but I managed
 
 <details>
     <summary>click to open. <b>your average junior angular dev</b></summary>
-    <img src="/src/assets/posts/1-tkom/image2-min.png" alt="Your average junior angular developer job ad.">
+    <img src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/image2-min.png" alt="Your average junior angular developer job ad.">
 </details>
 
 It's worth a full read for sure, it's one of those perfect cut, **fuck off** diamond listings, but let me summarise it in case you hate reading these, like I do:
@@ -38,7 +38,7 @@ These requirements combined with the "advantages" translate to a very strong med
 One honorable mention is.
 - Experience with Jira / Confluence.
 
-Very important to emphasize the need for Jira and Confluence in general, regardless of seniority level, because after writing code for years, decades *- or remember when installing operating systems were full weekend projects? -*, because
+Very important to emphasize the need for Jira and Confluence in general, regardless of seniority level, after writing code for years, decades *- or remember when even installing operating systems were full weekend projects? -*,
 
 <p class="middle"><span>I'm certain Jira will be our downfall. And all those scary, clicky-clicky drag and drop tools.</span></p>
 
@@ -55,30 +55,22 @@ Not that I'd apply to it. But there are juniors out there who will. Should this 
 
 <br>
 
-If they try to reach and hire the best of the best, one would rightfully think they take the representation of the business seriously, especially **with assets valued (as of 2022) around 300 billion Euros.** Of course I could be wrong and this is completely normal, because the current market favours businesses over employees.
+If they try to reach and hire the best of the best, one would rightfully think they take the representation of their business seriously, especially **with assets valued (as of 2022) around 300 billion Euros.** Of course I could be wrong and this is completely normal, because the current market favours businesses over employees.
 
-In my opinion, these requirements don’t match their public facing career site, not to mention their LinkedIn recruitment.
+In my opinion, these requirements don’t match their public facing career site.
 
-This goes to all the “HR moms” of LinkedIn. Please make it stop. Don't be my mom. Or my family. We should be running a business here.
-
-<img src="/src/assets/posts/1-tkom/image3-min.png" alt="asd">
-
-**Any questions?** Feel free to reach out to your local Kitten Mom. Maybe I'm the one who should adapt to this brave new world and set my LinkedIn title to something like: **Frontend Guy | Enjoys Pornhub 🍆**. Would be a massive hit I imagine.
-
-I might sound like a jerk, and it may feel like I hate corporations  in general.. well I am.. a jerk sometimes. But I don't hate corporations.
-
- **Let me give you a good job advert example from Tesco,** It's clear, and on point. And with this, I'm done ranting.
+ **Let me give you a good job advert example from Tesco,** It's clear, and on point. And with this, I'm done.
 
 - Software Development Engineer (JavaScript) @ Tesco, from LinkedIn.
 
-<img src="/src/assets/posts/1-tkom/tesco.png" alt="Initial bugged CSS.">
+<img src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/tesco.png" alt="Initial bugged CSS.">
 
 ## Part 3 - For god's sake just shut up and fix it already.
 
 
 Ok. The filters looked bad and I thought I would check what this insanely complex issue might be. Why can't they spare the “months” of developer time to fix it.
 
-<img src="/src/assets/posts/1-tkom/image1-min.png" alt="Initial bugged CSS.">
+<img src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/image1-min.png" alt="Initial bugged CSS.">
 
 **So I fixed it with three lines of CSS.**
 
@@ -97,7 +89,7 @@ I wasn’t sure if this was some bootstrap issue that developed over time, or th
 
 The CSS:after.
 
-<img src="/src/assets/posts/1-tkom/image4-min.png" alt="asd">
+<img src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/image4-min.png" alt="asd">
 
 <p class="middle"><span>Ticket closed. Good bye.</span></p>
 
@@ -109,12 +101,12 @@ I’ve done some filter clicking to reproduce it, took some shots and planned on
 I noticed when I remove all the filters, I don’t always get all the available positions back. Should have been around 180 ish. Sometimes it returned 15, 60, or 9.. numbers not 180 ish. Clicking the left sidebars input fields one by one did not reproduce the issue. So what’s the magic in the Delete Filters button? Because that one does the trick, and does it consistently. 
 
 <video width="100%" controls>
-    <source src="/src/assets/posts/1-tkom/vidfor8.mp4">
+    <source src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/vidfor8.mp4">
 </video>
 
 Count from response doesn’t equal to rendered results.
 
-<img src="/src/assets/posts/1-tkom/image5-min.png" alt="asd">
+<img src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/image5-min.png" alt="asd">
 
 I checked the dev console's requests and responses. The numbers were okay. The last response always had the correct `count` value.
 
@@ -122,13 +114,13 @@ At this exact point I felt I should just click the red X in the top right corner
 
 It looked good to me.
 
-<img src="/src/assets/posts/1-tkom/image6-min.png" alt="asd">
+<img src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/image6-min.png" alt="asd">
 
 Here I was able to confirm that it takes the wrong response, usually the value from the previous response. Or in some cases from responses even before.
 
 <p class="middle"><span>tl;dr anyway it's a race condition.</span></p> 
 
-<img src="/src/assets/posts/1-tkom/image7-min.png" alt="asd">
+<img src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/image7-min.png" alt="asd">
 
 Does a button click for each element.
 
@@ -136,7 +128,7 @@ Does a button click for each element.
 
 Whenever you press the Delete Filters button, the jQuery function starts targeting each single filter element, removes it from the view, and asks the server for a response. And keeps doing this for each single filter tag you applied, sending a request for each. These single filter tag removals happen quite fast, so the requests sent by them happen almost simultaneously. Whichever of these filter requests wins the race, gets to be king of the screen. 
 
-<img src="/src/assets/posts/1-tkom/image8-min.png" alt="asd">
+<img src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/image8-min.png" alt="asd">
 
 You can check it out <a class="offlink" href="https://www.deutschetelekomitsolutions.hu/en/open-positions/">HERE.</a>
 
