@@ -8,12 +8,11 @@ const { frontmatter } = Astro.props;
     <main>
         <article class="post">
 
-            <!-- <img src={frontmatter.image.url} alt={frontmatter.image.alt} width="100%"/> -->
             <h1>{frontmatter.title}</h1>
             <div class="tags">
                 {frontmatter.tags.map((tag) => <a class="tag" href={`/tags/${tag}`}>{tag}</a>)}
             </div>
-            <!-- smash in the md content -->
+
             <slot />
 
         </article>
@@ -21,12 +20,7 @@ const { frontmatter } = Astro.props;
         <aside>
 
             <p>Published on <span>{frontmatter.pubDate.toString().slice(0,10)}</span></p> 
-            <!-- <p>{frontmatter.description}</p> -->
-            <!-- <p>arrow right, hide</p> -->
-            <!-- <p>change article color (secondary, primary swap)</p> -->
-            <!-- <p>will add a navigation / content here and make it fixed position on desktop</p> -->
-            <!-- <p>implement lazy loading images with MDX</p> -->
-            <!-- <p>migrate assets to R2</p> -->
+
         </aside>
 
     </main>

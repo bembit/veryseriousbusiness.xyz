@@ -11,9 +11,6 @@ const { post } = Astro.props;
     <span>Est. Request size: {post.data.contentSize}. including {post.data.assetCount.images} images and {post.data.assetCount.videos} video(s).</span>
     <p>{post.data.description}</p>
     <button>Continue reading</button>
-    <!-- <span class="material-icons arrow">
-        chevron_right
-    </span> -->
 </a>
 
 <style>
@@ -26,7 +23,6 @@ const { post } = Astro.props;
         padding: 1.5rem 2rem;
         background-color: var(--background-minimal);
         transition: all .2s ease-in-out;
-        /* border-left: 2px solid transparent; */
     }
     .preview-tags {
         display: flex;
@@ -39,21 +35,13 @@ const { post } = Astro.props;
         background-color: var(--transparent-white);
         padding: .5rem 1rem;
     }
-    /* .arrow {
-        position: absolute;
-        right: 20px;
-        top: 1.5rem;
-        font-size: 100px;
-    } */
     .post-preview:hover {
         background-color: rgba(0, 0, 0, 0.086);
-        /* border-left: 2px solid var(--transparent-white); */
     }
     .post-preview h1 {
         font-size: 3rem;
         font-weight: 900;
         color: var(--text-secondary);
-        /* text-transform: capitalize; */
     }
     .post-preview p {
         font-size: 1.6rem;
@@ -68,7 +56,6 @@ const { post } = Astro.props;
         padding: .75rem 2rem;
         background-color: var(--text-primary);
         color: var(--text-secondary);
-        /* border-radius: var(--border-small); */
         border: none;
         width: fit-content;
     }

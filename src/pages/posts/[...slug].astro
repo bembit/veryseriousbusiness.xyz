@@ -5,10 +5,10 @@ import MdLayout from '../../layouts/MdLayout.astro';
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('posts');
-  return blogEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
-  }));
+const blogEntries = await getCollection('posts');
+return blogEntries.map(entry => ({
+	params: { slug: entry.slug }, props: { entry },
+}));
 }
 
 const { entry } = Astro.props;
@@ -16,5 +16,5 @@ const { Content } = await entry.render();
 ---
 
 <MdLayout frontmatter={entry.data}>
-  <Content />
+	<Content />
 </MdLayout>

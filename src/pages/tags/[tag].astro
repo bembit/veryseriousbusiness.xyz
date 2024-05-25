@@ -41,20 +41,9 @@ const { posts } = Astro.props;
 	</article>
 
 	<aside>
-		<!-- add descriptions later -->
-	<p>
-		Posts tagged with "{tag}": {posts.length}
-	</p>
-
-	<!-- <p>todo: tag description here soon</p> -->
-
-	<!-- this will be a desktop only thing -->
-	
-		<!-- {posts.map((post) => 
-			<a href={`/posts/${post.slug}`} title={post.data.title}>
-				<p>{post.data.title}</p>
-			</a>
-		)} -->
+		<p>
+			Posts tagged with "{tag}": {posts.length}
+		</p>
 	</aside>
 
 </main>

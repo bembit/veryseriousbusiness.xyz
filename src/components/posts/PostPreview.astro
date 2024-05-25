@@ -7,22 +7,10 @@ let allPosts = await getCollection('posts');
 allPosts = allPosts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 
 ---
-<!-- this should be renamed, kinda like index -->
 <Type typeTitle="preview." routeTitle="home" />
-
-<!-- <div class="post-preview-container"> -->
 
 {allPosts.map(post => (
 
     <Post post={post} />
 
 ))}
-
-<!-- </div> -->
-
-<style>
-    .post-preview-container {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-</style>
