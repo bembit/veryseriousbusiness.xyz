@@ -14,7 +14,6 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
         <div class="tags">
             {tags.map((tag) => <a class="tag" href={`/tags/${tag}`}>{tag}</a>)}
         </div>
-        <!-- add descriptions later -->
         <p>opinion: my view of things</p>
         <p>debug: finding interesting things and/or fixing them</p>
         <p>hardway: <strike>the next Battlefield games title</strike> analysing my own mistakes and failures</p>
