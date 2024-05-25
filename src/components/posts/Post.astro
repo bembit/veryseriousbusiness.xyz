@@ -8,6 +8,7 @@ const { post } = Astro.props;
         {post.data.tags.map((tag) => <span class="tag">{tag}</span>)}
     </div>
     <span>{post.data.pubDate.toString().slice(0,10)}</span>
+    <span>Est. Request size: {post.data.contentSize}. including {post.data.assetCount.images} images and {post.data.assetCount.videos} video(s).</span>
     <p>{post.data.description}</p>
     <button>Continue reading</button>
     <!-- <span class="material-icons arrow">
