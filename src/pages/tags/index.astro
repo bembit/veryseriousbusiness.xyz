@@ -15,7 +15,10 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
             {tags.map((tag) => <a class="tag" href={`/tags/${tag}`}>{tag}</a>)}
         </div>
         <!-- add descriptions later -->
-        <p>todo: tag descriptions soon</p>
+        <p>opinion: my view of things</p>
+        <p>debug: finding interesting things and/or fixing them</p>
+        <p>hardway: <strike>the next Battlefield games title</strike> analysing my own mistakes and failures</p>
+        <h3>the rest are various tags depending on tech, level of expertise, etc.</h3>
     </article>
     <aside>
         <p>{tags.length} tags currently.</p>
