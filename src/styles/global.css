@@ -201,9 +201,13 @@ article {
     color: var(--text-secondary);
     background-color: var(--text-primary);
 } */
+.post details {
+    width: 100%;
+}
 .post details summary {
+    width: 100%;
     background-color: var(--text-secondary);
-    width: fit-content;
+    /* width: fit-content; */
     padding: .25rem 1rem;
 }
 .post .update {
