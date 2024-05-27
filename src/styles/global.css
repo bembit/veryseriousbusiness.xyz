@@ -239,7 +239,7 @@ article.post {
 .post p:has(+ img), .post p:has(+ video) {
     margin-bottom: 2rem;
 }
-.post span:not(.middle > span) {
+.post span:not(.middle > span):not(.typography-title span) {
     font-size: 1.2rem;
     color: var(--text-secondary);
 }
