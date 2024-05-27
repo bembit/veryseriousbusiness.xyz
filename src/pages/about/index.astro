@@ -9,36 +9,51 @@ const pageTitle = "About.";
 <BaseLayout pageTitle={pageTitle}>
 
     <main>
-        <article>
+        <article class="post">
             <Type typeTitle="about." routeTitle="about" />
             <div class="about-container">
                 
                 <h2>bence</h2>
 
                 <!-- quick intro -->
-                <p>I live inside the wire since '99.</p>
-                <p>I find frontend to be more exciting than backend. From color to caching you can find a lot of fun.</p>
-                <p>I'm the first ever person who used caching and fun in the same sentence</p>
-                
-                <h2>why this blog?</h2>
-                <h3>We have a lot of cool tech blogs out there. I wanted something different.</h3>
-                
-                <h3>what else could I do?</h3>
                 <ul>
-                    <li>snipe typos in github issues</li>
-                    <li>write dev.to / medium / freecodecamp articles on how to install react?</li>
-                    <li>clickbait youtube videos?</li>
-                    <li>dancing on tiktok to 10 second song</li>
-                    <li>or the worst case scenario. become a linkedin influencer?</li>
+                    <li>I live inside the wire since '99.</li>
+                    <li>A friend of mine showed me python more than a decade ago.</li>
+                    <li>In a way he single handedly ruined my life and I hold him responsible for this.</li>
+                    <li>I find frontend to be more exciting than backend. From color to caching there's a lot to explore.</li>
+                    <li>I'm the first ever person who used caching and fun in the same sentence.</li>
+                    <li>We are not going to touch caching here.</li>
                 </ul>
                 
-                <p>It all started a decade ago by coincidence, moving close to where a friend of mine lived. And one day he told be “hey you are not a complete idiot, you should learn to code.”</p>
+                <h2>welcome</h2>
+
+                <ul>
+                    <li>Do you like interesting things, bugs?</li>
+                    <li>Are you a student, a junior, a javascript enjoyer?</li>
+                    <li>Afraid of big corp tech requirements? See what's behind those crazy expectations.</li>
+                    <li>Do you prefer reading real, production examples with images and comments?</li>
+                </ul>
                 
-                <p>In a way he single handedly ruined my life and I hold him responsible for sitting here and I’m not somewhere else, making furniture, painting, picking strawberries.</p>
+                <h2>important</h2>
+                <p>Not targeting devs here, or judging code quality. It's the business sides failure most times anyway. Will judge my own only. Plenty to do so.</p>
                 
-                <p>I realized this back in 2019 when I applied for a frontend job. Just debugged their site. . Waited 5 more years to start working on it.</p>
+                <h2>why this blog?</h2>
+                <p>We have a lot of cool tech blogs out there. I wanted something different.</p>
                 
-                <a href="">more about me on madbence.com</a>
+                <p>I realized I quite like debugging frontend things back in 2019. Since then I wanted to document my journey and share it,
+                    but I never had the time or the balls to do so.
+                </p>
+
+                <p>What else could I do?</p>
+                <ul>
+                    <li>Snipe typos on GitHub and open PRs?</li>
+                    <li>Write dev.to / medium / freecodecamp articles on how to install react?</li>
+                    <li>Clickbait Youtube videos?</li>
+                    <li>Dance on TikTok to 10 second song</li>
+                    <li>Or god forbid, become a LinkedIn influencer?</li>
+                </ul>
+                
+                <p>more on <a href="">madbence.com</a></p>
 
             </div>
         </article>
@@ -50,16 +65,3 @@ const pageTitle = "About.";
     </main>
 
 </BaseLayout>
-
-<style>
-    .about-container {
-        display: flex;
-        flex-direction: column;
-        /* align-items: center; */
-        /* justify-content: center; */
-    }
-    .about-container p {
-        margin-top: 3rem;
-    }
-
-</style>

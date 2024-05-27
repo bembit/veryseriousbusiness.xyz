@@ -9,43 +9,49 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 
 <BaseLayout pageTitle={pageTitle}>
 <main>
-    <article>
+    <article class="post">
         <Type typeTitle="alltags." routeTitle="tags" />
+        <p>There are {tags.length} tags.</p>
         <div class="tags">
             {tags.map((tag) => <a class="tag" href={`/tags/${tag}`}>{tag}</a>)}
         </div>
-        <h2>main tags are</h2>
-        <p>debug: finding interesting things and/or fixing them</p>
-        <p>opinion: my view of things</p>
-        <p>hardway: <strike>the next Battlefield games title</strike> analysing my own mistakes and failures</p>
-        <h3>the rest are various tags depending on tech, level of expertise, etc.</h3>
-
-        <p>we are not targeting devs here, or judge code quality. only my own.</p>
-                
-        <h3>Are you a student / junior, afraid of big corp tech? You can get to know them here. See what's behind their requirements.</h3>
-
-        <p>Real production code. This way you can learn. Even if you're not working as a developer 8 hours a day. Reading real things or implementing real things is the only true way to progress as a programmer. </p>
-
-
+        <h2>the main tags</h2>
+        <h3>debug</h3>
+        <ul>
+            <li>finding interesting bugs, things</li>
+            <li>fixing them or showcasing them</li>
+        </ul>
+        <h3>opinion</h3>
+        <ul>
+            <li>sharing my thoughts and opinions</li>
+            <li>some NSFW content</li>
+        </ul>
+        <h3>hardway</h3>
+        <ul>
+            <li><strike>the next Battlefield games title?</strike></li>
+            <li>analysing and sharing my own mistakes and failures</li>
+        </ul>
+        <br>
+        <h3>The rest are various tags depending on tech used, level of expertise, etc.</h3>
 
         <h2>testing</h2>
         <h3>browsers</h3>
         <ul>
-            <li>Chromium / v8 - Chrome, Brave, Edge</li>
+            <li>all major browsers</li>
+            <li>chromium / v8 - Chrome, Brave, Edge</li>
             <li>gecko / spidermonkey - FireFox, FireFox Dev</li>
             <li>webkit / javascriptcore - Safari</li>
             <li>android using chromium browser</li>
         </ul>
         <h3>OS</h3>
         <ul>
-            <li>windows 11</li>
-            <li>macOS latest whatever animal mountain name is the current one</li>
+            <li>Windows 11</li>
+            <li>macOS latest whatever animal / mountain name is the current one</li>
             <li>linux on an ubuntu 22.04 LTS</li>
         </ul>
 
     </article>
     <aside>
-        <p>{tags.length} tags currently.</p>
     </aside>
 
 </main>
