@@ -242,7 +242,29 @@ import MobileNav from "./MobileNav.astro";
             padding-right: 0;
             background-color: inherit;
         }
-    }
+        @media (max-width: 350px) {
+            header h1 {
+                font-size: 1.6rem;
+            }   
+            header div.subtitle {
+                position: absolute;
+                top: 45%;
+                left: 10%;
+                font-size: 1rem;
+                transform: translateY(-3px);
+            }
+            header div.subtitle p:first-of-type {
+                transform: translateX(10px);
+            }
+            header span:first-of-type:not(.material-icons) {
+                font-size: 1.2rem;
+                transform: rotate(5deg);
+            }
+            header span:last-of-type:not(.material-icons) {
+                font-size: 1.6rem;
+                transform: rotate(-5deg);
+            }
+        }
 
 </style>
 

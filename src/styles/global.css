@@ -155,6 +155,11 @@ article {
 
 /* post HTML styles */
 
+article.post {
+    width: 100%;
+    flex-basis: 75%;
+}
+
 .post h1 {
     font-size: 3rem;
     font-weight: 900;
@@ -178,8 +183,12 @@ article {
     text-decoration: underline;
 }
 .post pre {
+    width: 100%;
     padding: 1rem 2rem;
+    overflow-y: hidden;
 }
+.post pre, code {white-space:pre !important; overflow-x:scroll !important}
+
 .post p {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -286,10 +295,15 @@ aside p {
         padding-right: calc(var(--header-height) / 2);
     }
 }
-@media (max-width: 1400px) {
+@media (max-width: 1600px) {
     :root {
         --nav-width: 300px;
-    }       
+    }
+}
+@media (max-width: 1400px) {
+    :root {
+        --nav-width: 250px;
+    }
 }
 
 @media (max-width: 1250px) {
@@ -322,9 +336,7 @@ aside p {
         flex-basis: 100%;
     }
     aside {
-        padding-bottom: 0;
-        padding-right: 25px;
-        padding-left: 25px;
+        padding: 10px 25px 10px 25px;  
     }
     aside p {
         color: var(--text-primary);
@@ -358,5 +370,7 @@ aside p {
 }
 
 @media (max-width: 350px) {
-    
+    :root {
+        --header-height: 50px;
+    }
 }
