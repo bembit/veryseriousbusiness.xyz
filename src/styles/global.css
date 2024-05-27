@@ -24,7 +24,7 @@
     /* 1d97f5 */
     --transparent-white: #ffffff37;
     --header-height: 100px;
-    --nav-width: 400px;
+    --nav-width: 300px;
     /* --background-image: radial-gradient(circle at 100% 100%, var(--background-primary-opacity), var(--secondary) 95%, var(--secondary) 95%); */
     --box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .2);
     --box-shadow-light: 0 3px 15px rgba(255, 255, 255, 0.096);
@@ -184,10 +184,10 @@ article.post {
 }
 .post pre {
     width: 100%;
+    /* max-width: fit-content; */
     padding: 1rem 2rem;
-    overflow-y: hidden;
 }
-.post pre, code {white-space:pre !important; overflow-x:scroll !important}
+/* .post pre, code {white-space:pre !important; overflow-x:scroll !important} */
 
 .post p {
     margin-top: 1rem;
