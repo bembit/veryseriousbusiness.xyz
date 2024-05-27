@@ -4,7 +4,7 @@ pubDate: 2024-04-24
 description: 'The long overdue CSS fix. And a surprise discovery.'
 author: 'Bence Madar'
 tags: ["debug", "junior", "jquery"]
-contentSize: "~1mb"
+contentSize: "~ 1mb"
 assetCount:
     images: '5'
     videos: '1'
@@ -130,7 +130,7 @@ Something should be throttled, timed out, debounced. There are way too many appr
 // separate the button .click() from the .remove() func
 function advancedSearchButton() {
     $('#tsystemsjobs_advancedsearchbutton').click();
-    }
+}
 ...
 var debounceIt = debounce(advancedSearchButton, 300);
 
@@ -146,7 +146,7 @@ I don't know, there's a lot of code for all kinds of searches and filters, there
 
 ### Credit where credit is due.
 
-It's great to see a jQuery/WordPress site from the 2010s, still in prod. Even if <a href="https://web.archive.org/web/20201124150805/https://www.deutschetelekomitsolutions.hu/karrier/nyitott-poziciok/">the site looks to be from 2020.</a>, I'm sure it was just copied over from the previous NotDeutscheTelekomITServices implementation. At least that’s what I would have done if I had a perfectly fine, working site base. Don’t reinvent the wheel. A good example of not needing a hot new framework for everything to exist and be functional, even in 2024. 
+It's great to see a jQuery/WordPress site from the 2010s, still in prod. Even if <a href="https://web.archive.org/web/20201124150805/https://www.deutschetelekomitsolutions.hu/karrier/nyitott-poziciok/">the site looks to be from 2020</a>, I'm sure it was just copied over from the previous NotDeutscheTelekomITServices implementation. At least that’s what I would have done if I had an already working site base. Don’t reinvent the wheel. A good example of not needing a hot new framework for everything to exist and be functional, even in 2024. 
 
 <p class=”middle”>Well, mostly functional.</p>
 

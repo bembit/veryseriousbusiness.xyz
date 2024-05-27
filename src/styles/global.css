@@ -155,10 +155,10 @@ article {
 
 /* post HTML styles */
 
-article.post {
+/* article.post {
     width: 100%;
     flex-basis: 75%;
-}
+} */
 
 .post h1 {
     font-size: 3rem;
@@ -167,7 +167,7 @@ article.post {
     text-transform: capitalize;
 }
 
-.post h2 {
+.post h2:not(.typography-title) {
     margin-top: 4rem;
     margin-bottom: 2rem;
     color: var(--tertiary);
@@ -194,7 +194,7 @@ article.post {
     margin-bottom: 1rem;
     font-size: 19px;
     font-weight: 500;
-    color: var(--white)
+    color: var(--white);
 }
 .post p.middle {
     padding: 0rem 25%;

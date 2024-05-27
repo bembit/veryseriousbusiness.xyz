@@ -11,7 +11,7 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 <main>
     <article class="post">
         <Type typeTitle="alltags." routeTitle="tags" />
-        <p>There are {tags.length} tags.</p>
+        <!-- <p>There are {tags.length} tags.</p> -->
         <div class="tags">
             {tags.map((tag) => <a class="tag" href={`/tags/${tag}`}>{tag}</a>)}
         </div>
@@ -19,11 +19,11 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
         <h3>debug</h3>
         <ul>
             <li>finding interesting bugs, things</li>
-            <li>fixing them or showcasing them</li>
+            <li>sometimes fixing them but mostly showcasing them</li> 
         </ul>
         <h3>opinion</h3>
         <ul>
-            <li>sharing my thoughts and opinions</li>
+            <li>sharing my thoughts and opinion</li>
             <li>some NSFW content</li>
         </ul>
         <h3>hardway</h3>
