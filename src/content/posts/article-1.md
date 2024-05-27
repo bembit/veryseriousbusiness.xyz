@@ -72,11 +72,6 @@ At this exact point I felt I should just click the red X in the top right corner
 
 <p class="middle">So I did what had to be done.</p>
 
-<!-- <details open>
-    <summary>hide</summary>
-    <img src="/src/assets/images/gearup.gif">
-</details> -->
-
 I dug up all the JavaScript files that could be responsible for this issue. I spent some more time checking the network requests and responses but they were fine. I checked the jQuery render function that takes in the response and..
 
 It looked good to me.
@@ -90,7 +85,8 @@ jQuery.ajax({
     success: function (response) {
         jQuery("#loadingoverlay").hide();
         // set resultcount
-        jQuery('.tsystemjobs_result_indicator_inner').find('.counter').html(response.count);
+        jQuery('.tsystemjobs_result_indicator_inner')
+            .find('.counter').html(response.count);
         jQuery("#tsystemjobs_resultcount").html(response.count);
         jQuery("#tsystemsjobs_results").removeClass('hidden');
 ...
@@ -106,11 +102,9 @@ By this point I was able to confirm that the render takes in the wrong response,
 ```javascript
 // these functions click the button to refresh the search FOR EACH tag removed
     $('.search_tags').find('.'+elementid).remove();
+    // hidden button in dom
     $('#tsystemsjobs_advancedsearchbutton').click();
 }
-// hidden button included for reference
-// <button class="button medium hidden" id="tsystemsjobs_advancedsearchbutton">Search for jobs</button>
-
 //.reset is the button that removes all the tags
 // does a button click for each search tag element.
 $('.reset').on('click',function(){

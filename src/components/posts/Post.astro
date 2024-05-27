@@ -11,7 +11,7 @@ const { post } = Astro.props;
     <!-- <span>Est. Request size: {post.data.contentSize}. including {post.data.assetCount.images} images and {post.data.assetCount.videos} video(s).</span> -->
     <span>Est. Request size: {post.data.contentSize}.</span>
     <p>{post.data.description}</p>
-    <button>Continue reading</button>
+    <button aria-label="continue reading">Continue reading</button>
 </a>
 
 <style>
