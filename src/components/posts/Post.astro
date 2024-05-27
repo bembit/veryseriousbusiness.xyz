@@ -8,7 +8,8 @@ const { post } = Astro.props;
         {post.data.tags.map((tag) => <span class="tag">{tag}</span>)}
     </div>
     <span>{post.data.pubDate.toString().slice(0,10)}</span>
-    <span>Est. Request size: {post.data.contentSize}. including {post.data.assetCount.images} images and {post.data.assetCount.videos} video(s).</span>
+    <!-- <span>Est. Request size: {post.data.contentSize}. including {post.data.assetCount.images} images and {post.data.assetCount.videos} video(s).</span> -->
+    <span>Est. Request size: {post.data.contentSize}.</span>
     <p>{post.data.description}</p>
     <button>Continue reading</button>
 </a>
@@ -64,7 +65,17 @@ const { post } = Astro.props;
     }
     @media (max-width: 500px) {
         .post-preview {
+            padding: 0rem .5rem;
+        }
+        .post-preview h1 {
             padding: 5px 5px;
+            font-size: 2.5rem;
         }
     }
+    @media (max-width: 350px) {
+        .post-preview h1 {
+            font-size: 2rem;
+        }
+    }
+
 </style>

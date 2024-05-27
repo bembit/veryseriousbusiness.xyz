@@ -31,9 +31,12 @@ const mainCategories = ["debug", "opinion", "hardway"]
         position: fixed;
         top: 0;
         left: 0;
+        /* background-color: var(--background-minimal); */
         width: var(--nav-width);
         border-radius: var(--border-rounded);
         border-top: var(--borders);
+        padding-top: 25px;
+        padding-left: 25px;
     }
 
     nav h3 {
@@ -49,7 +52,7 @@ const mainCategories = ["debug", "opinion", "hardway"]
         gap: 10px; */
         /* justify-content: center; */
         /* align-items: flex-end; */
-        width: 70%;
+        width: 100%;
     }
 
     .nav-item {
@@ -82,13 +85,13 @@ const mainCategories = ["debug", "opinion", "hardway"]
         padding-right: 30px;
     }
 
+
     @media (max-width: 1400px) {
         .nav-list {
             width: 90%;
 
         }
     }
-
     @media (max-width: 950px) {
         nav {
             position: initial;
@@ -103,9 +106,13 @@ const mainCategories = ["debug", "opinion", "hardway"]
             display: none;
         }
     }
-
     @media (max-width: 500px) {
         nav {padding: 10px 10px; }
+    }
+    @media (max-height: 700px) {
+        nav {
+            padding-top: 0;
+        }
     }
 
 </style>

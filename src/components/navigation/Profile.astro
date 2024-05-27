@@ -15,7 +15,7 @@
             <li><a href="/rss.xml.js" target="_blank">rss</a></li>
         </ul>
         <p>
-            I once failed as a freelancer for not following the "take the money and run" principle. I happen to find interesting things, bugs.
+            I happen to find interesting things, bugs.
             <a href="/about.html" class="nav-link">More..</a>
         </p>
 </div>
@@ -27,9 +27,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        margin-top: 25px;
-        width: 70%;
+        width: 100%;
     }
 
     .profile div:first-of-type {
@@ -49,13 +47,13 @@
 
     .profile p {
         display: inline-block;
-        background-color: var(--background-minimal);
+        /* background-color: var(--background-minimal); */
         text-align: left;
         color: var(--text-primary);
         font-size: 1.25rem;
         font-weight: 700;
-        width: 90%;
-        padding: 1rem 1rem;
+        /* width: 90%; */
+        padding: 1rem 0rem;
     }
 
     .profile p > a {
@@ -107,7 +105,7 @@
     }
     @media (max-width: 950px) {
         .profile {
-            margin-left: 25px;
+            /* margin-left: 25px; */
             margin-right: 25px;
             width: 100%;
             margin-top: 0;
@@ -132,7 +130,6 @@
             height: 45px;
             width: 45px;
             border: 2px solid var(--text-primary);
-
         }
         .profile-socials {
             margin-top: 0;
@@ -151,6 +148,19 @@
         }
         .profile-socials {
             font-size: 1.2rem;
+        }
+    }
+    @media (max-width: 350px) {
+        .profile div:first-of-type .profile-picture {
+            display: none;
+        }
+        .profile h2 {
+            margin-left: 0;
+        }
+    }
+    @media (max-height: 700px) {
+        .profile {
+            background-color: inherit;
         }
     }
 
