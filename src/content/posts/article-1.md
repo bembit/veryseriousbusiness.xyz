@@ -1,5 +1,5 @@
 ---
-title: 'Something Special -  The Deutsche Telekom Jobsite.'
+title: 'Something Special - The Deutsche Telekom Jobsite.'
 pubDate: 2024-04-24 
 description: 'The long overdue CSS fix. And a surprise discovery.'
 author: 'Bence Madar'
@@ -10,7 +10,7 @@ assetCount:
     videos: '1'
 ---
 
-<img src="/src/assets/posts//1-tkom/hero.png" alt="Initial bugged CSS.">
+<img src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/hero.png" alt="Initial bugged CSS.">
 
 ## Unpleasant morning coffees.
 
@@ -28,9 +28,9 @@ To put it mildly, I couldn't find a position I was interested in. But I've found
 
 ## No mistakes here, just happy little accidents.
 
-I’m not sure if this CSS was coming from a deprecated / version bumped library like Bootstrap, or if these filters were just implemented later, not even considering the potential line break. Which would be my guess, for it’s quite the work to add all the tags on desktop view to break it. A band aid solution of sorts to a “can we get this done by yesterday” request. I know those requests well. That's why my money is on the latter part, especially as we continue to dive in.
+I’m not sure if this CSS was coming from a deprecated / version bumped library like Bootstrap, or if these filters were just implemented later, not even considering the potential line break. Which would be my guess, for it’s quite the work to add all the tags on desktop view to break it. A band aid solution of sorts to a “can we get this done by yesterday” request. I know those requests well. That's why my money is on the latter part.
 
-<img src="/src/assets/posts//1-tkom/image1-min.png" alt="Initial bugged CSS.">
+<img src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/image1-min.png" alt="Initial bugged CSS.">
 
 <p class="middle"><span>So I fixed it with three lines of CSS.</span></p>
 
@@ -46,25 +46,25 @@ It could also use the removal of unnecessary margins, and some modified paddings
 
 The CSS:after.
 
-<img src="/src/assets/posts//1-tkom/image4-min.png" alt="asd">
+<img src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/image4-min.png" alt="asd">
 
 <p class="middle"><span>Ticket closed. Good bye. You deserve more, little CSS.</span></p>
 
 ## But wait, there's more!
 
-A few days later I decided to go back and take some screenshots for reference. You know, before they rush in and fix it. Seriously you never know with these things. You start writing about these for fun and the next day it’s gone. All you have left is scraping the archives for the past.
+A few days later I decided to go back and take some screenshots for reference. You know, before they rush in and fix it. Seriously you never know with these things. You start preparing to write about these for fun and the next day it’s gone. All you have left is scraping the archives.
 
 I’ve done some filter clicking to reproduce it, started taking my precious shots and planned on calling it a day.
 
 I noticed while I cleared all the filters with the Delete filters button, I didn't get all the available positions back. The number should have been around 180 ish. But it only returned 15. So I started an input / filter clicking frenzy. Sometimes it returned the correct 180 ish. Often other numbers. 15, 60, or 9.. numbers not 180 ish. Clicking the left sidebars input fields one by one did not reproduce the issue. So what’s the magic of the Delete Filters button? Because that one does the trick, and does it consistently. 
 
 <video width="100%" controls>
-    <source src="/src/assets/posts//1-tkom/vidfor8.mp4">
+    <source src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/vidfor8.mp4">
 </video>
 
 **Count from response doesn’t equal to rendered results.**
 
-<img src="/src/assets/posts//1-tkom/image5-min.png" alt="asd">
+<img src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/image5-min.png" alt="asd">
 
 I checked the dev console's requests and responses. The numbers were okay. The last response always had the correct `count` value.
 
@@ -118,7 +118,7 @@ $('.search_tags').children('span').each(function(){
 
 Whenever you press the Delete Filters button, the jQuery function targets each single filter element, removes it from the view, and asks the server for a response. It keeps doing this for each single filter tag you applied, sending a request for each tag removal. These single filter tag removals happen quite fast, so all the requests sent by them happen almost simultaneously. Whichever of these filter requests get back to the above included render function first will be the winner of the race, and gets to be the king of the screen.
 
-<img src="/src/assets/posts//1-tkom/image8-min.png" alt="asd">
+<img src="https://pub-d6c34ccb68414a5bbfe746e44b7811ff.r2.dev/1-tkom/image8-min.png" alt="asd">
 
 You can play with it <a href="https://www.deutschetelekomitsolutions.hu/en/open-positions/">here.</a>
 
