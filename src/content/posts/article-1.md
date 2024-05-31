@@ -24,7 +24,7 @@ Didn’t help to look it up on the wayback machine either. <a href="https://web.
 
 To put it mildly, I couldn't find a position I was interested in. But I've found something much better. The need to investigate, and document these findings. To show others, who may be living in this delusion of not being good enough. 
 
-<p class="middle">There are things out there, things not good enough either. From Very Serious Businesses.</p>
+<p class="middle">There are things not good enough out there too. From Very Serious Businesses.</p>
 
 ## No mistakes here, just happy little accidents.
 
