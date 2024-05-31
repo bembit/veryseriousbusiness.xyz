@@ -70,9 +70,7 @@ I checked the dev console's requests and responses. The numbers were okay. The l
 
 At this exact point I felt I should just click the red X in the top right corner and leave the room, leave the house. 
 
-<p class="middle">So I did what had to be done.</p>
-
-I dug up all the JavaScript files that could be responsible for this issue. I spent some more time checking the network requests and responses but they were fine. I checked the jQuery render function that takes in the response and..
+So I dug up all the JavaScript files that could be responsible for this issue. I spent some more time checking the network requests and responses but they were fine. I checked the jQuery render function that takes in the response and..
 
 It looked good to me.
 
@@ -97,7 +95,7 @@ By this point I was able to confirm that the render takes in the wrong response,
 
 <p class="middle"><span>Let's call this a "render-race condition".</span></p> 
 
-<p>You can also spend some time an absorb the context of ${this}. The below ${this} references the upper .remove() and .click() functions.</p>
+<p>The below ${this} references the upper .remove() and .click() functions.</p>
 
 ```javascript
 // these functions click the button to refresh the search FOR EACH tag removed
