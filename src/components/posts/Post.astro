@@ -11,7 +11,7 @@ const { post } = Astro.props;
     <!-- <span>Est. Request size: {post.data.contentSize}. including {post.data.assetCount.images} images and {post.data.assetCount.videos} video(s).</span> -->
     <span>Est. Request size: {post.data.contentSize}.</span>
     <p>{post.data.description}</p>
-    <button aria-label="continue reading">Continue reading</button>
+    <!-- <button aria-label="continue reading">Continue reading</button> -->
 </a>
 
 <style>
@@ -65,7 +65,7 @@ const { post } = Astro.props;
     }
     @media (max-width: 500px) {
         .post-preview {
-            padding: 0rem .5rem;
+            padding: 0rem .5rem 1rem .5rem;
         }
         .post-preview h1 {
             padding: 5px 5px;
