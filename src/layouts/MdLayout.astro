@@ -17,25 +17,5 @@ const { frontmatter } = Astro.props;
 
         </article>
 
-        <aside>
-
-            <p>Published on <span>{frontmatter.pubDate.toString().slice(0,10)}</span></p> 
-
-        </aside>
-
     </main>
 </BaseLayout>
-
-<style>
-    /* move these? */
-    aside span {
-        font-size: 1.45rem;
-        color: var(--text-secondary);
-    }
-
-    aside p {
-        font-size: 1.45rem;
-        color: var(--text-primary);
-    }
-
-</style>

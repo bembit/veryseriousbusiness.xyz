@@ -36,7 +36,7 @@ import MobileNav from "./MobileNav.astro";
         justify-content: space-between;
         color: var(--text-primary);
         /* padding-top: 25px; */
-        padding-left: var(--header-height);
+        padding-left: var(--custom-padding-size);
         padding-right: 25px;
         margin-left: var(--nav-width);
         border-left: var(--borders);
@@ -86,7 +86,12 @@ import MobileNav from "./MobileNav.astro";
     /* right side tiny menu */
 
     header > .tiny-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
         padding: 1rem 2rem;
+        margin-top: 20px;
+        margin-right: 25px;
         background-color: var(--background-minimal);
         font-weight: 700;
         text-transform: uppercase;
@@ -95,8 +100,9 @@ import MobileNav from "./MobileNav.astro";
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        position: relative;
+        /* position: relative; */
         user-select: none;
+        z-index: 100;
     }
 
     header span.material-icons {
@@ -241,6 +247,8 @@ import MobileNav from "./MobileNav.astro";
         header .tiny-menu {
             padding-left: 0;
             padding-right: 0;
+            margin-top: 0;
+            margin-right: 5px;
             background-color: inherit;
         }
         @media (max-width: 350px) {

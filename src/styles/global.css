@@ -38,6 +38,7 @@
     --border-small: 5px;
     --border-rounded: 0px;
     --footer-height: 65px;
+    --custom-padding-size: 100px;
 }
 
 html {
@@ -147,18 +148,13 @@ article {
     width: 100%;
     min-height: 100svh;
     color: var(--text-primary);
-    flex-basis: 75%;
-    padding-left: var(--header-height);
-    padding-right: var(--header-height);
+    flex-basis: 60%;
+    padding-left: var(--custom-padding-size);
+    /* padding-right: var(--custom-padding-size); */
     padding-bottom: calc(5% + var(--footer-height));
 }
 
 /* post HTML styles */
-
-/* article.post {
-    width: 100%;
-    flex-basis: 75%;
-} */
 
 .post h1 {
     font-size: 3rem;
@@ -168,7 +164,7 @@ article {
 }
 
 .post h2:not(.typography-title) {
-    margin-top: 4rem;
+    margin-top: 8rem;
     margin-bottom: 2rem;
     color: var(--tertiary);
     font-weight: 900;
@@ -260,35 +256,6 @@ article {
     margin-left: 1rem;
 }
 
-aside {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-basis: 25%;
-    padding: 0% 0% 5% 0%;
-    margin-right: 25px;
-}
-
-aside h3 {
-    color: var(--text-primary);
-    font-size: 1.6rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    text-transform: capitalize;
-}
-
-aside p {
-    padding: .5rem 1rem;
-    font-weight: 500;
-    font-size: 1.4rem;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
-    background-color: var(--background-minimal);
-    color: var(--text-secondary);
-
-}
-
 @media (max-width: 1650px) {
     article {
         padding-left: calc(var(--header-height) / 2);
@@ -335,12 +302,6 @@ aside p {
     article {
         flex-basis: 100%;
     }
-    aside {
-        padding: 10px 25px 10px 25px;  
-    }
-    aside p {
-        color: var(--text-primary);
-    }
 }
 
 @media (max-width: 950px) {
@@ -358,14 +319,15 @@ aside p {
         padding: 10px 10px; 
         padding-bottom: calc(var(--footer-height) + 25px);
     }
+    .post h2 {
+        padding-left: 10px;
+    }
     .post p {
+        padding: 10px 10px;
         font-size: 18px;
     }
     .post p.middle {
         padding: 0 10%;
-    }
-    aside {
-        padding: 10px 10px; 
     }
 }
 
