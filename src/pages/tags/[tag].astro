@@ -33,18 +33,15 @@ const { posts } = Astro.props;
 
 	<article class="">
 	<Type typeTitle={tag + "."} routeTitle="tag" />
+
+	<p>Posts tagged with "{tag}": {posts.length}</p>
+	<br>
 	<ul>
 		{posts.map((post) =>
 		<Post post={post} />
 		)}
 	</ul>
 	</article>
-
-	<aside>
-		<p>
-			Posts tagged with "{tag}": {posts.length}
-		</p>
-	</aside>
 
 </main>
 
