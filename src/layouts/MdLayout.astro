@@ -7,7 +7,7 @@ const { frontmatter } = Astro.props;
 
     <main>
         <article class="post">
-
+            <!-- push -->
             <h1>{frontmatter.title}</h1>
             <div class="tags">
                 {frontmatter.tags.map((tag) => <a class="tag" href={`/tags/${tag}`}>{tag}</a>)}
