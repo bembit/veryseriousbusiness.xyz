@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Type from "../components/posts/Type.astro";
+import { Image } from "astro:assets";
+import react from "/src/assets/images/react.png";
+const title = "Not Found."
+---
+
+<BaseLayout pageTitle={title}>
+
+    <main>
+
+        <article>
+            
+            <Type typeTitle="notfound" routeTitle="404" />
+
+            <div class="notfound">
+                <Image class="spinny" src={react} alt="notfound" width="50" height="50" />
+            </div>
+
+        </article>
+
+    </main>
+
+</BaseLayout>
+
+<style>
+
+    .notfound {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    img.spinny {
+        margin-top: 5rem;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        animation: spin 4s linear infinite;
+        border: 3px solid cyan;
+    }
+    @keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+</style>
