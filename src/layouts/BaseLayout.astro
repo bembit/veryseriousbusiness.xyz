@@ -1,0 +1,38 @@
+---
+
+import Header from '../components/header/Header.astro';
+import Footer from '../components/footer/Footer.astro';
+import Navigation from '../components/navigation/Navigation.astro';
+
+import ViewTransitions from 'astro/components/ViewTransitions.astro';
+
+import '@fontsource-variable/public-sans';
+import '@fontsource/material-icons';
+import '../styles/global.css';
+
+const { pageTitle } = Astro.props;
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Blog description." />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+		<ViewTransitions />
+	</head>
+
+	<body class="load">
+    
+        <Header />
+
+        <Navigation />
+        
+        <slot />
+
+        <Footer />
+
+    </body>
+</html>

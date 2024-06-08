@@ -1,0 +1,60 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Type from "../../components/posts/Type.astro";
+const pageTitle = "Tags";
+const allPosts = await getCollection("posts");
+const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+---
+
+<BaseLayout pageTitle={pageTitle}>
+<main>
+    <article class="post">
+        <Type typeTitle="alltags." routeTitle="tags" />
+        <!-- <p>There are {tags.length} tags.</p> -->
+        <div class="tags">
+            {tags.map((tag) => <a class="tag" href={`/tags/${tag}`}>{tag}</a>)}
+        </div>
+        <h2>the main tags</h2>
+        <h3>debug</h3>
+        <ul>
+            <li>finding interesting bugs, things</li>
+            <li>sometimes fixing them but mostly showcasing them</li> 
+        </ul>
+        <h3>opinion</h3>
+        <ul>
+            <li>sharing my thoughts and opinion</li>
+            <li>some NSFW content</li>
+        </ul>
+        <h3>hardway</h3>
+        <ul>
+            <li><strike>the next Battlefield games title?</strike></li>
+            <li>analysing and sharing my own mistakes and failures</li>
+        </ul>
+        <br>
+        <h3>The rest are various tags depending on tech used, level of expertise, etc.</h3>
+
+        <!-- <h2>testing</h2>
+        <h3>browsers</h3>
+        <ul>
+            <li>all major browsers</li>
+            <li>chromium / v8 - Chrome, Brave, Edge</li>
+            <li>gecko / spidermonkey - FireFox, FireFox Dev</li>
+            <li>webkit / javascriptcore - Safari</li>
+            <li>android using chromium browser</li>
+        </ul>
+        <h3>OS</h3>
+        <ul>
+            <li>Windows 11</li>
+            <li>macOS latest whatever animal / mountain name is the current one</li>
+            <li>linux on an ubuntu 22.04 LTS</li>
+        </ul> -->
+
+    </article>
+
+</main>
+</BaseLayout>
+
+<style>
+
+</style>
