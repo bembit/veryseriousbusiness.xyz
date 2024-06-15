@@ -164,7 +164,7 @@ article {
 }
 
 .post h2:not(.typography-title) {
-    margin-top: 8rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     color: var(--tertiary);
     font-weight: 900;
@@ -245,6 +245,9 @@ article {
 }
 .post img:first-of-type:not(details img) {
     border: 3px solid var(--tertiary);
+}
+.post img:hover {
+    cursor: pointer;
 }
 .post ul {  
     list-style: square;

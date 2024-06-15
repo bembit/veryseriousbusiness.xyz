@@ -9,7 +9,7 @@ const { post } = Astro.props;
     </div>
     <span>{post.data.pubDate.toString().slice(0,10)}</span>
     <!-- <span>Est. Request size: {post.data.contentSize}. including {post.data.assetCount.images} images and {post.data.assetCount.videos} video(s).</span> -->
-    <span>Est. Request size: {post.data.contentSize}.</span>
+    <!-- <span>Est. Request size: {post.data.contentSize}.</span> -->
     <p>{post.data.description}</p>
     <!-- <button aria-label="continue reading">Continue reading</button> -->
 </a>
