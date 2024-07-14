@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Type from "../../components/posts/Type.astro";
+const pageTitle = "About.";
+---
+
+
+
+<BaseLayout pageTitle={pageTitle}>
+
+    <main>
+        <article class="post">
+            <Type typeTitle="about." routeTitle="about" />
+            <div class="about-container">
+                
+                <h2>this blog</h2>
+                <ul>
+                    <li>asd</li>
+                    <li>asd</li>
+                    <li>asd</li>
+                </ul>
+
+                <h2>me</h2>
+
+                <ul>
+                    <li>asd</li>
+                    <li>asd</li>
+                    <li>asd</li>
+                </ul>
+                
+                <h2>something important</h2>
+                <ul>
+                    <li>asd</li>
+                    <li>asd</li>
+                    <li>asd</li>
+                </ul>
+
+                <h2>what else</h2>
+
+                <ul>
+                    <li>asd</li>
+                    <li>asd</li>
+                    <li>asd</li>
+                </ul>
+
+            </div>
+        </article>
+
+    </main>
+
+</BaseLayout>

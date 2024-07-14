@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Type from "../../components/posts/Type.astro";
+const pageTitle = "Tags";
+const allPosts = await getCollection("posts");
+const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+---
+
+<BaseLayout pageTitle={pageTitle}>
+<main>
+    <article class="post">
+        <Type typeTitle="alltags." routeTitle="tags" />
+        <!-- <p>There are {tags.length} tags.</p> -->
+        <div class="tags">
+            {tags.map((tag) => <a class="tag" href={`/tags/${tag}`}>{tag}</a>)}
+        </div>
+        <h2>the main tags</h2>
+        <h3>debug:</h3>
+        <br>
+        <ul>
+            <li>Easy to spot bugs from big businesses.</li>
+            <li>Sometimes fixing them, but mostly just showcasing them.</li>
+        </ul>
+        <br>
+        <h3>The rest are various tags depending on tech used, level of expertise, etc.</h3>
+
+    </article>
+
+</main>
+</BaseLayout>
+
+<style>
+
+</style>
